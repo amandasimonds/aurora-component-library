@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/ngx-aurora-pattern-library",
       "sourceRoot": "projects/ngx-aurora-pattern-library/src",
-      "prefix": "lib",
+      "prefix": "aurora",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -28,7 +28,20 @@
             "tsConfig": "projects/ngx-aurora-pattern-library/tsconfig.spec.json",
             "karmaConfig": "projects/ngx-aurora-pattern-library/karma.conf.js"
           }
-        },
+        },   
+          "storybook": {
+            "builder": "@storybook/angular:start-storybook",
+            "options": {
+              "browserTarget": "angular-cli:build",
+              "port": 6006
+            }
+          },
+          "build-storybook": {
+            "builder": "@storybook/angular:build-storybook",
+            "options": {
+              "browserTarget": "angular-cli:build"
+            }
+          },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
