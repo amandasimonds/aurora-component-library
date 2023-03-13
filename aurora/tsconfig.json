@@ -17,6 +17,7 @@
     ],
     "paths": {
       "ngx-aurora-pattern-library": [
+        "projects/ngx-aurora-pattern-library/src/public-api",
         "dist/ngx-aurora-pattern-library/ngx-aurora-pattern-library",
         "dist/ngx-aurora-pattern-library"
       ]

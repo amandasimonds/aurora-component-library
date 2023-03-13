@@ -28,30 +28,19 @@
             "tsConfig": "projects/ngx-aurora-pattern-library/tsconfig.spec.json",
             "karmaConfig": "projects/ngx-aurora-pattern-library/karma.conf.js"
           }
-        },   
-          "storybook": {
-            "builder": "@storybook/angular:start-storybook",
-            "options": {
-              "browserTarget": "angular-cli:build",
-              "port": 6006
-            }
-          },
-          "build-storybook": {
-            "builder": "@storybook/angular:build-storybook",
-            "options": {
-              "browserTarget": "angular-cli:build"
-            }
-          },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+        }
+      }
+    },
+    "storybook": {
+      "projectType": "application",
+      "root": "stories",
+      "sourceRoot": "stories",
+      "architect": {
+        "build": {
           "options": {
-            "tsConfig": [
-              "projects/ngx-aurora-pattern-library/tsconfig.lib.json",
-              "projects/ngx-aurora-pattern-library/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": "tsconfig.json",
+            "styles": [],
+            "scripts": []
           }
         }
       }

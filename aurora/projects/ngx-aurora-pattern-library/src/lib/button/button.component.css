@@ -1,0 +1,8 @@
+.aurora {
+    background-color: black;
+    color: white;
+}
+
+.aurora:hover {
+    cursor: pointer
+}
