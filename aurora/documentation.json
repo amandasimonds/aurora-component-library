@@ -126,7 +126,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": ".aurora {\r\n    background-color: black;\r\n    color: white;\r\n}\r\n\r\n.aurora:hover {\r\n    cursor: pointer\r\n}",
                     "styleUrl": "./button.component.css"
                 }
             ],
@@ -139,7 +139,7 @@
                 "args": [],
                 "line": 12
             },
-            "templateData": "<button [ngClass]=\"classes\" [disabled]=\"disabled\">\n    <ng-content></ng-content>\n</button>\n"
+            "templateData": "<button class=\"aurora\" [disabled]=\"disabled\">\n    <ng-content></ng-content>\n</button>\n"
         },
         {
             "name": "ButtonComponent",
@@ -701,17 +701,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<AuroraButtonComponent>",
-                "defaultValue": "() => ({\r\n  component: AuroraButtonComponent,\r\n  template: `<aurora-button>Button</aurora-button>`,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+                "defaultValue": "() => ({\r\n  component: AuroraButtonComponent,\r\n  template: `<aurora-button>Button Story</aurora-button>`,\r\n})"
             },
             {
                 "name": "Template",
@@ -722,6 +712,16 @@
                 "deprecationMessage": "",
                 "type": "Story<NgxAuroraPatternLibraryComponent>",
                 "defaultValue": "(args: NgxAuroraPatternLibraryComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Button>",
+                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -777,7 +777,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<AuroraButtonComponent>",
-                    "defaultValue": "() => ({\r\n  component: AuroraButtonComponent,\r\n  template: `<aurora-button>Button</aurora-button>`,\r\n})"
+                    "defaultValue": "() => ({\r\n  component: AuroraButtonComponent,\r\n  template: `<aurora-button>Button Story</aurora-button>`,\r\n})"
                 }
             ],
             "projects/ngx-aurora-pattern-library/src/lib/button/button.stories.ts": [
