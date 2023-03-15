@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "test-lib": "ng test ngx-aurora-pattern-library",
     "lint": "ng lint",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "npm run docs:json && start-storybook -p 6006",
@@ -26,7 +27,7 @@
     "zone.js": "~0.11.8"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^15.2.3",
+    "@angular-devkit/build-angular": "^14.2.10",
     "@angular/cli": "^14.2.10",
     "@angular/compiler-cli": "^14.3.0",
     "@babel/core": "^7.21.0",
