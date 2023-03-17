@@ -55,7 +55,7 @@
     "components": [
         {
             "name": "AuroraButtonComponent",
-            "id": "component-AuroraButtonComponent-aa318c3a92d2913445b2e4333836149a2a57a701c6d7bd5c2efd581f877b1080dd40b68578a372c02b91e2c01727bcc33056fcf7e4394df02d3664ab1eb0a5d4",
+            "id": "component-AuroraButtonComponent-535997c7155e9e95822e518916cf1b7b2530879d0d2f31cdcf3beb5ab8b7c1a694d36e6fbea68a2fc0573159a32dcdd58da4601f9a25fd968b9e0fb40a2169e4",
             "file": "projects/ngx-aurora-pattern-library/src/lib/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -64,7 +64,7 @@
             "providers": [],
             "selector": "aurora-button",
             "styleUrls": [
-                "./button.component.css"
+                "./button.component.scss"
             ],
             "styles": [],
             "templateUrl": [
@@ -122,12 +122,12 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'aurora-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.css']\n})\nexport class AuroraButtonComponent {\n\n  public classes = [];\n  public disabled = false;\n  public color = 'black';\n\n  constructor() { }\n\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'aurora-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class AuroraButtonComponent {\n\n  public classes = [];\n  public disabled = false;\n  public color = 'black';\n\n  constructor() { }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
                     "data": ".aurora {\r\n    background-color: purple;\r\n    color: white;\r\n}\r\n\r\n.aurora:hover {\r\n    cursor: pointer\r\n}",
-                    "styleUrl": "./button.component.css"
+                    "styleUrl": "./button.component.scss"
                 }
             ],
             "stylesData": "",
@@ -332,7 +332,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "/* .wrapper {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\nsvg {\n  display: inline-block;\n  vertical-align: top;\n}\n\nh1 {\n  font-weight: 900;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nbutton + button {\n  margin-left: 10px;\n}\n\n.welcome {\n  color: #333;\n  font-size: 14px;\n  margin-right: 10px;\n} */\n",
+                    "data": ".wrapper {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\nsvg {\n  display: inline-block;\n  vertical-align: top;\n}\n\nh1 {\n  font-weight: 900;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nbutton + button {\n  margin-left: 10px;\n}\n\n.welcome {\n  color: #333;\n  font-size: 14px;\n  margin-right: 10px;\n}\n",
                     "styleUrl": "./header.css"
                 }
             ],
@@ -465,7 +465,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "/* section {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\nsection h2 {\n  font-weight: 900;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nsection p {\n  margin: 1em 0;\n}\n\nsection a {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\nsection ul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\nsection li {\n  margin-bottom: 8px;\n}\n\nsection .tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\nsection .tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\nsection .tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\nsection .tip-wrapper svg path {\n  fill: #1ea7fd;\n} */\n",
+                    "data": "section {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\nsection h2 {\n  font-weight: 900;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nsection p {\n  margin: 1em 0;\n}\n\nsection a {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\nsection ul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\nsection li {\n  margin-bottom: 8px;\n}\n\nsection .tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\nsection .tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\nsection .tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\nsection .tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
                     "styleUrl": "./page.css"
                 }
             ],
@@ -717,21 +717,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/examplecomponent.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<NgxAuroraPatternLibraryComponent>",
-                "defaultValue": "(args: NgxAuroraPatternLibraryComponent) => ({\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "stories/Header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Header>",
                 "defaultValue": "(args: Header) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/examplecomponent.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<NgxAuroraPatternLibraryComponent>",
+                "defaultValue": "(args: NgxAuroraPatternLibraryComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",

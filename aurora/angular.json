@@ -5,6 +5,11 @@
   "projects": {
     "ngx-aurora-pattern-library": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/ngx-aurora-pattern-library",
       "sourceRoot": "projects/ngx-aurora-pattern-library/src",
       "prefix": "aurora",
