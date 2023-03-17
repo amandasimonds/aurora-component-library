@@ -1,0 +1,13 @@
+{
+    "source": ["../tokens/tokens.json"],
+    "platforms": {
+      "scss": {
+        "transformGroup": "scss",
+        "buildPath": "../build/",
+        "files": [{
+          "destination": "aurora-token-variables.scss",
+          "format": "scss/variables"
+        }]
+      }
+    }
+  }
