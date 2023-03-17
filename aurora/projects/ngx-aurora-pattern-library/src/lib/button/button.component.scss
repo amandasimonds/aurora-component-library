@@ -1,8 +1,14 @@
-.aurora {
-    background-color: purple;
-    color: white;
-}
+@import '../styles/aurora-theme.scss';
 
-.aurora:hover {
-    cursor: pointer
+
+    .aurora {
+    background-color: $primary-primary;
+    color: white;
+    font-family: "Inter";
+
+
+&:hover {
+    cursor: pointer;
+    background-color: $primary-primary-hover;
+}
 }

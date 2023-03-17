@@ -1,0 +1,13 @@
+@import './variables.scss';
+
+.aurora-theme {
+    html {
+        font-size: 1rem;
+        color: $neutral-blue-black;
+        font-family: "Inter";
+    }
+    
+    body {
+        color: $neutral-blue-black;
+    }
+}
