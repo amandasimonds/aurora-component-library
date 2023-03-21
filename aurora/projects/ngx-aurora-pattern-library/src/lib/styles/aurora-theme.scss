@@ -4,9 +4,10 @@ html {
     font-size: 1rem;
     color: var(--apl-text-color);
     font-family: 'Inter';
+    font-weight: 300;
 }
 
 body {
     color: var(--apl-text-color);
-    background-color: black;
+    background-color: var(--apl-color-background-blue);
 }

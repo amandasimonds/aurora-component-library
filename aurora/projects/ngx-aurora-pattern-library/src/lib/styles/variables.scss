@@ -1,6 +1,15 @@
 @import './style-dictionary/style-dictionary-variables.scss';
 
 :root {
-    --color-primary: #{$primary-primary-hover};
-    --apl-text-color: #{$neutral-blue-black};
+    --apl-color-warn:#{$apl-color-warn};
+    --apl-color-warn-2:#{$apl-color-warn-2};
+    --apl-color-background-blue: #{$apl-color-background-blue};
+    --apl-color-primary-default: #{$apl-color-primary-default};
+    --apl-color-primary-hover: #{$apl-color-primary-hover};
+    --apl-color-success-default: #135d46;
+    --apl-color-success-hover: #19805e;
+    --apl-color-darks-black: #010101;
+    --apl-color-darks-blue: #0d1b2a;
+    --apl-color-darks-gray: #303036;
+    --apl-text-color: white;
 }
