@@ -126,7 +126,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../styles/styles.scss';\r\n\r\n.aurora {\r\n    background-color: $primary-primary;\r\n    color: white;\r\n}\r\n\r\n.aurora:hover {\r\n    cursor: pointer;\r\n    background-color: $primary-primary-hover;\r\n}",
+                    "data": "@import '../styles/aurora-theme.scss';\r\n\r\n\r\n    .aurora {\r\n    background-color: $primary-primary;\r\n    color: white;\r\n    font-family: \"Inter\";\r\n\r\n\r\n&:hover {\r\n    cursor: pointer;\r\n    background-color: $primary-primary-hover;\r\n}\r\n}",
                     "styleUrl": "./button.component.scss"
                 }
             ],
@@ -701,7 +701,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<AuroraButtonComponent>",
-                "defaultValue": "() => ({\r\n  component: AuroraButtonComponent,\r\n  template: `<aurora-button>Button Story</aurora-button>`,\r\n})"
+                "defaultValue": "() => ({\r\n  component: AuroraButtonComponent,\r\n  template: `\r\n  <aurora-button>\r\n  Button Story\r\n  </aurora-button>\r\n  hello hello hello`,\r\n})"
             },
             {
                 "name": "Template",
@@ -777,7 +777,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<AuroraButtonComponent>",
-                    "defaultValue": "() => ({\r\n  component: AuroraButtonComponent,\r\n  template: `<aurora-button>Button Story</aurora-button>`,\r\n})"
+                    "defaultValue": "() => ({\r\n  component: AuroraButtonComponent,\r\n  template: `\r\n  <aurora-button>\r\n  Button Story\r\n  </aurora-button>\r\n  hello hello hello`,\r\n})"
                 }
             ],
             "projects/ngx-aurora-pattern-library/src/lib/button/button.stories.ts": [
