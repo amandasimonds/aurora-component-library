@@ -1,40 +1,6 @@
+@import './style-dictionary/style-dictionary-variables.scss';
 
-// Do not edit directly
-// Generated on Fri, 17 Mar 2023 20:16:13 GMT
-
-$font-families-inter: Inter;
-$line-heights-0: AUTO;
-$font-weights-inter-0: Regular;
-$letter-spacing-0: 0%;
-$paragraph-spacing-0: 0;
-$heading-1: [object Object];
-$heading-2: [object Object];
-$heading-3: [object Object];
-$heading-4: [object Object];
-$heading-5: [object Object];
-$heading-6: [object Object];
-$paragraph: [object Object];
-$body: [object Object];
-$neutral-black: #010101;
-$neutral-blue-black: #0d1b2a;
-$neutral-gray-dark: #303036;
-$warn: #dd037f;
-$warn-2: #a0035c;
-$blue: #131d7f;
-$blue-2: #1b2587;
-$blue-3: #465f98;
-$light-blue: #2ad1d3;
-$light-violet: #9a9ce9;
-$light-pink: #f3afd5;
-$primary-primary: #5d61da;
-$primary-primary-hover: #3339d1;
-$success-success: #19805e;
-$success-success-hover: #135d46;
-$font-size-h6: 10.720000267028809;
-$font-size-h4: 13.279999732971191;
-$font-size-h3: 20.799999237060547;
-$font-size-h2: 24;
-$font-size-h1: 32;
-$text-case-none: none;
-$text-decoration-none: none;
-$paragraph-indent-0: 0px;
+:root {
+    --color-primary: #{$primary-primary-hover};
+    --apl-text-color: #{$neutral-blue-black};
+}

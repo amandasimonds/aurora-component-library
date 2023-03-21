@@ -44,7 +44,7 @@
         "build": {
           "options": {
             "tsConfig": "tsconfig.json",
-            "styles": [],
+            "styles": ["projects/ngx-aurora-pattern-library/src/lib/styles/aurora-theme.scss"],
             "scripts": []
           }
         }
