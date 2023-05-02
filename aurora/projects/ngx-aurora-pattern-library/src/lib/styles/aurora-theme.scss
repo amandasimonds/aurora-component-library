@@ -1,13 +1,29 @@
 @import './variables.scss';
 
+// .aurora-light-theme {
 html {
     font-size: 1rem;
-    color: var(--apl-text-color);
+    color: var(--apl-text-color-light-theme);
     font-family: 'Inter';
     font-weight: 300;
 }
 
 body {
-    color: var(--apl-text-color);
-    background-color: var(--apl-color-background-blue);
+    color: var(--apl-text-color-light-theme);
+    background-color: var(--apl-color-background-light-theme);
+}
+// }
+
+.aurora-dark-theme {
+    html {
+        font-size: 1rem;
+        color: var(--apl-text-color);
+        font-family: 'Inter';
+        font-weight: 300;
+    }
+
+    body {
+        color: var(--apl-text-color);
+        background-color: var(--apl-color-background-blue);
+    }
 }

@@ -115,7 +115,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".aurora {\r\n    background-color: var(--apl-color-primary-default);\r\n    font-family: 'Inter';\r\n\r\n    &:hover {\r\n        cursor: pointer;\r\n        background-color: var(--color-primary);\r\n    }\r\n}\r\n",
+                    "data": ".aurora {\n    background-color: var(--apl-color-primary-default);\n    font-family: 'Inter';\n\n    &:hover {\n        cursor: pointer;\n        background-color: var(--color-primary);\n    }\n}\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],
@@ -132,7 +132,7 @@
         },
         {
             "name": "ColorsExampleComponent",
-            "id": "component-ColorsExampleComponent-83c7331dd0ea0253c03351322a2379cddd781e42e5d37c2725c5421e9eebe49e46fd42ec66bb41d1670702b5222bfad1a84663e08042b99d49121e44d44c78bc",
+            "id": "component-ColorsExampleComponent-2e9a337ee3549af7a1f11b467669a4b82ac6a11aad94ec48ef418f514ef0ecad2f7eb9b4e33d8191fca63a8adb03acd68172821f56bdcb076b2daa1e28eac163",
             "file": "stories/colors-stories/colors-example.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [
@@ -162,7 +162,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';\r\n\r\n@Component({\r\n    selector: 'epd-pl-colors-example',\r\n    templateUrl: './colors-example.component.html',\r\n    styleUrls: [ './colors-example.component.scss' ],\r\n    changeDetection: ChangeDetectionStrategy.OnPush,\r\n    encapsulation: ViewEncapsulation.None\r\n})\r\nexport class ColorsExampleComponent {\r\n\r\n}\r\n",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';\n\n@Component({\n    selector: 'epd-pl-colors-example',\n    templateUrl: './colors-example.component.html',\n    styleUrls: [ './colors-example.component.scss' ],\n    changeDetection: ChangeDetectionStrategy.OnPush,\n    encapsulation: ViewEncapsulation.None\n})\nexport class ColorsExampleComponent {\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -171,7 +171,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"aurora-theme\">\r\n    <p>EPD PL Colors & Style Variables | Click to copy the PL variable name</p>\r\n</div>\r\n"
+            "templateData": "<div class=\"aurora-theme\">\n    <p>EPD PL Colors & Style Variables | Click to copy the PL variable name</p>\n</div>\n"
         },
         {
             "name": "NgxAuroraPatternLibraryComponent",
@@ -274,13 +274,13 @@
         },
         {
             "name": "ColorsExampleModule",
-            "id": "module-ColorsExampleModule-09b913753fc4281a3efeadb87ec7eac2b30b597bfdcf193adb7a16088b4173aa46ccd5750a6a210d564b973afe1d83df43d8141f535aa9dabae56f54a9d670e4",
+            "id": "module-ColorsExampleModule-0eac841ac3af799ee498a84eab7bbe1e30f0f37fe1f1e763d05b051840861e2d805cce4735d4b9114ca9b3635bead257dfdc42203b3c43a2fe9f451293dac5af",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "stories/colors-stories/colors-example.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { ColorsExampleComponent } from './colors-example.component';\r\n\r\n@NgModule({\r\n    declarations: [\r\n        ColorsExampleComponent\r\n    ],\r\n    imports: [\r\n        CommonModule,\r\n        BrowserAnimationsModule,\r\n    ],\r\n    exports: [\r\n        ColorsExampleComponent\r\n    ]\r\n})\r\nexport class ColorsExampleModule {\r\n}\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { ColorsExampleComponent } from './colors-example.component';\n\n@NgModule({\n    declarations: [\n        ColorsExampleComponent\n    ],\n    imports: [\n        CommonModule,\n        BrowserAnimationsModule,\n    ],\n    exports: [\n        ColorsExampleComponent\n    ]\n})\nexport class ColorsExampleModule {\n}\n",
             "children": [
                 {
                     "type": "providers",
@@ -420,7 +420,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<AuroraButtonComponent>",
-                "defaultValue": "() => ({\n  component: AuroraButtonComponent,\n  template: `\n  <aurora-button>\n  Button Story\n  </aurora-button>\n  hello hello hello`,\n})"
+                "defaultValue": "() => ({\n    component: AuroraButtonComponent,\n    template: `\n  <div class=\"aurora-light-theme\">\n  <aurora-button>\n  Button Story\n  </aurora-button>\n  hello hello hello\n  </div>`,\n})"
             },
             {
                 "name": "Template",
@@ -430,7 +430,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ColorsExampleComponent>",
-                "defaultValue": "(args: ColorsExampleComponent) => ( {\r\n    props: args\r\n} )"
+                "defaultValue": "(args: ColorsExampleComponent) => ( {\n    props: args\n} )"
             },
             {
                 "name": "Template",
@@ -466,7 +466,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<AuroraButtonComponent>",
-                    "defaultValue": "() => ({\n  component: AuroraButtonComponent,\n  template: `\n  <aurora-button>\n  Button Story\n  </aurora-button>\n  hello hello hello`,\n})"
+                    "defaultValue": "() => ({\n    component: AuroraButtonComponent,\n    template: `\n  <div class=\"aurora-light-theme\">\n  <aurora-button>\n  Button Story\n  </aurora-button>\n  hello hello hello\n  </div>`,\n})"
                 }
             ],
             "projects/ngx-aurora-pattern-library/src/lib/button/button.stories.ts": [
@@ -531,7 +531,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<ColorsExampleComponent>",
-                    "defaultValue": "(args: ColorsExampleComponent) => ( {\r\n    props: args\r\n} )"
+                    "defaultValue": "(args: ColorsExampleComponent) => ( {\n    props: args\n} )"
                 }
             ]
         },
