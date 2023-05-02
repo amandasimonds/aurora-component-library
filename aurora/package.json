@@ -7,8 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "test-lib": "ng test ngx-aurora-pattern-library",
-    "build-lib": "ng build ngx-aurora-pattern-library --configuration production && node copydir.js",
-    "build-lib-watch": "ng build ngx-aurora-pattern-library --configuration development --watch",
+    "build-lib": "ng build ngx-aurora-pattern-library --configuration production && npm run compile:sass",
+    "build-lib-watch": "ng build ngx-aurora-pattern-library --watch",
     "publish-lib": "cd dist/ngx-aurora-pattern-library && npm publish",
     "build-publish-lib": "npm run build-lib && npm run publish-lib",
     "lint": "ng lint",
@@ -18,7 +18,9 @@
     "compodoc:build": "compodoc -p tsconfig.doc.json",
     "compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -s",
     "compodoc:serve": "compodoc -s",
-    "build:style-dictionary": "cd projects/ngx-aurora-pattern-library/src/lib/styles/style-dictionary && style-dictionary build"
+    "build:style-dictionary": "cd projects/ngx-aurora-pattern-library/src/lib/styles/style-dictionary && style-dictionary build",
+    "compile:sass": "sass projects/ngx-aurora-pattern-library/src/lib/styles/aurora-theme.scss dist/ngx-aurora-pattern-library/styles/aurora-theme.css",
+    "compile:sass-watch": "sass --watch projects/ngx-aurora-pattern-library/src/lib/styles/aurora-theme.scss dist/ngx-aurora-pattern-library/styles/aurora-theme.css"
   },
   "private": false,
   "dependencies": {
@@ -62,6 +64,7 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "ng-packagr": "^14.2.2",
     "protractor": "~7.0.0",
+    "sass": "^1.59.3",
     "style-dictionary": "^3.7.2",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",

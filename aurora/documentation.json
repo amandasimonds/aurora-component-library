@@ -31,7 +31,7 @@
     "components": [
         {
             "name": "AuroraButtonComponent",
-            "id": "component-AuroraButtonComponent-535997c7155e9e95822e518916cf1b7b2530879d0d2f31cdcf3beb5ab8b7c1a694d36e6fbea68a2fc0573159a32dcdd58da4601f9a25fd968b9e0fb40a2169e4",
+            "id": "component-AuroraButtonComponent-f16a388aae669f1d24ba800305eeb73db8faa22bfd09fe9b01ba7a86ecb981fb6ba3e5dfc0508d796ac074337545614f6a867b443397d6cb8bb9fb9cad091726",
             "file": "projects/ngx-aurora-pattern-library/src/lib/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -58,7 +58,7 @@
                     "type": "[]",
                     "optional": false,
                     "description": "",
-                    "line": 10,
+                    "line": 9,
                     "modifierKind": [
                         123
                     ]
@@ -71,7 +71,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 12,
+                    "line": 11,
                     "modifierKind": [
                         123
                     ]
@@ -84,7 +84,20 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 11,
+                    "line": 10,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 12,
                     "modifierKind": [
                         123
                     ]
@@ -98,11 +111,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'aurora-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class AuroraButtonComponent {\n\n  public classes = [];\n  public disabled = false;\n  public color = 'black';\n\n  constructor() { }\n\n}\n",
+            "sourceCode": "import { Component } from '@angular/core'\n\n@Component({\n    selector: 'aurora-button',\n    templateUrl: './button.component.html',\n    styleUrls: ['./button.component.scss'],\n})\nexport class AuroraButtonComponent {\n    public classes = []\n    public disabled = false\n    public color = 'black'\n    public label = ''\n\n    constructor() {}\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".aurora {\r\n    background-color: var(--color-primary);\r\n    font-family: 'Inter';\r\n\r\n    &:hover {\r\n        cursor: pointer;\r\n        background-color: var(--color-primary);\r\n    }\r\n}\r\n",
+                    "data": ".aurora {\r\n    background-color: var(--apl-color-primary-default);\r\n    font-family: 'Inter';\r\n\r\n    &:hover {\r\n        cursor: pointer;\r\n        background-color: var(--color-primary);\r\n    }\r\n}\r\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],
@@ -407,7 +420,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<AuroraButtonComponent>",
-                "defaultValue": "() => ({\r\n  component: AuroraButtonComponent,\r\n  template: `\r\n  <div class=\"aurora-theme\">\r\n  <aurora-button>\r\n  Button Story\r\n  </aurora-button>\r\n  hello hello hello\r\n  </div>`\r\n  ,\r\n})"
+                "defaultValue": "() => ({\n  component: AuroraButtonComponent,\n  template: `\n  <aurora-button>\n  Button Story\n  </aurora-button>\n  hello hello hello`,\n})"
             },
             {
                 "name": "Template",
@@ -453,7 +466,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<AuroraButtonComponent>",
-                    "defaultValue": "() => ({\r\n  component: AuroraButtonComponent,\r\n  template: `\r\n  <div class=\"aurora-theme\">\r\n  <aurora-button>\r\n  Button Story\r\n  </aurora-button>\r\n  hello hello hello\r\n  </div>`\r\n  ,\r\n})"
+                    "defaultValue": "() => ({\n  component: AuroraButtonComponent,\n  template: `\n  <aurora-button>\n  Button Story\n  </aurora-button>\n  hello hello hello`,\n})"
                 }
             ],
             "projects/ngx-aurora-pattern-library/src/lib/button/button.stories.ts": [
@@ -537,7 +550,7 @@
                 "linktype": "component",
                 "name": "AuroraButtonComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {
