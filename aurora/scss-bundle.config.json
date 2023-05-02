@@ -1,0 +1,7 @@
+{
+  "bundlerOptions": {
+    "entryFile": "./projects/ngx-aurora-pattern-library/src/lib/styles/aurora-theme.scss",
+    "rootDir": "./projects/ngx-aurora-pattern-library/src/lib/styles/",
+    "outFile": "./dist/ngx-aurora-pattern-library-ii/src/aurora-theme.scss"
+  }
+}

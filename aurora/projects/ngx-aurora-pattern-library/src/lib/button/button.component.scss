@@ -1,8 +1,9 @@
 .aurora {
-    background-color: purple;
-    color: white;
-}
+    background-color: var(--apl-color-primary-default);
+    font-family: 'Inter';
 
-.aurora:hover {
-    cursor: pointer
+    &:hover {
+        cursor: pointer;
+        background-color: var(--color-primary);
+    }
 }

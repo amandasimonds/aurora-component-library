@@ -21,7 +21,11 @@ export default {
 // This creates a Story for the component
 const Template: Story<AuroraButtonComponent> = () => ({
   component: AuroraButtonComponent,
-  template: `<aurora-button>Button Story</aurora-button>`,
+  template: `
+  <aurora-button>
+  Button Story
+  </aurora-button>
+  hello hello hello`,
 });
 export const Base = Template.bind({});
 // Other stories could be added here as well, all you have to do is export them along!

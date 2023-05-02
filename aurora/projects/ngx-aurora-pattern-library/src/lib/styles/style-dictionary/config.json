@@ -3,9 +3,9 @@
     "platforms": {
       "scss": {
         "transformGroup": "scss",
-        "buildPath": "../build/",
+        "buildPath": "./",
         "files": [{
-          "destination": "aurora-token-variables.scss",
+          "destination": "style-dictionary-variables.scss",
           "format": "scss/variables"
         }]
       }
