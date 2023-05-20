@@ -11,7 +11,7 @@ export const parameters = {
             date: /Date$/,
         },
     },
-    docs: { inlineStories: true },
+    // docs: { inlineStories: true },
     options: {
         storySort: {
             order: ['Getting Started', 'Global', 'Components', '*'],

@@ -1,0 +1,7 @@
+<div
+    class="backdrop"
+    [class.backdrop-visible]="isVisible"
+    [ngStyle]="{ 'z-index': zIndex, 'height': height, 'width': width }"
+    (click)="onBackdropClicked($event)"
+></div>
+
