@@ -30,6 +30,125 @@
     "directives": [],
     "components": [
         {
+            "name": "AuroraBackdropComponent",
+            "id": "component-AuroraBackdropComponent-95e5bf7240451c369a3c3e90d94fb649d09cda2b8b8e8676cd10da79b718ba5258e614eece33398f7a42fb988ba622b821798a1d56a21f74783e5a5be765d5db",
+            "file": "projects/ngx-aurora-pattern-library/src/lib/backdrop/backdrop.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "aurora-backdrop",
+            "styleUrls": [
+                "./backdrop.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./backdrop.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "height",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "isVisible",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "width",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "zIndex",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "backdropClicked",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "onBackdropClicked",
+                    "args": [
+                        {
+                            "name": "$event",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        123
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "$event",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, ChangeDetectionStrategy, Input, EventEmitter, Output } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'aurora-backdrop',\r\n  templateUrl: './backdrop.component.html',\r\n  styleUrls: ['./backdrop.component.scss'],\r\n  changeDetection: ChangeDetectionStrategy.OnPush\r\n})\r\nexport class AuroraBackdropComponent {\r\n\r\n  @Input() public zIndex = '';\r\n  @Input() public height = '';\r\n  @Input() public width = '';\r\n  @Input() public isVisible = false;\r\n  @Output() public readonly backdropClicked = new EventEmitter<Event>();\r\n\r\n  public onBackdropClicked($event: Event): void {\r\n    this.backdropClicked.emit($event);\r\n  }\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".backdrop {\r\n    top:0;\r\n    left: 0;\r\n    height: 100vh;\r\n    width: 100vw;\r\n    background-color: rgba(13,12,34,0.16);\r\n    position: absolute;\r\n    opacity: 0;\r\n    visibility: hidden;\r\n    transition: all .5s;\r\n\r\n    &-visible {\r\n        opacity: 1;\r\n        visibility: visible;\r\n        transition: opacity .5s;\r\n    }\r\n}\r\n",
+                    "styleUrl": "./backdrop.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div\r\n    class=\"backdrop\"\r\n    [class.backdrop-visible]=\"isVisible\"\r\n    [ngStyle]=\"{ 'z-index': zIndex, 'height': height, 'width': width }\"\r\n    (click)=\"onBackdropClicked($event)\"\r\n></div>\r\n\r\n"
+        },
+        {
             "name": "AuroraButtonComponent",
             "id": "component-AuroraButtonComponent-f16a388aae669f1d24ba800305eeb73db8faa22bfd09fe9b01ba7a86ecb981fb6ba3e5dfc0508d796ac074337545614f6a867b443397d6cb8bb9fb9cad091726",
             "file": "projects/ngx-aurora-pattern-library/src/lib/button/button.component.ts",
@@ -115,7 +234,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".aurora {\r\n    background-color: var(--apl-color-primary-default);\r\n    font-family: 'Inter';\r\n\r\n    &:hover {\r\n        cursor: pointer;\r\n        background-color: var(--color-primary);\r\n    }\r\n}\r\n",
+                    "data": ".aurora {\n    background-color: var(--apl-color-primary-default);\n    font-family: 'Inter';\n    color: white;\n    height: 40px;\n    padding: 0 12px;\n    border: none;\n    border-radius: 8px;\n\n    &:hover {\n        cursor: pointer;\n        background-color: var(--apl-color-primary-hover);\n    }\n}\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],
@@ -131,8 +250,95 @@
             "templateData": "<button class=\"aurora\" [disabled]=\"disabled\">\n    <ng-content></ng-content>\n</button>\n"
         },
         {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-0fdc7c194fd8ab33c2c5f36619441dd5aeeca87ff18af25a5f7d6569ce66b47a374a382161749294125c0ba17f63209cbd98be2ff64e7933c07e52c11a6d1b34",
+            "file": "projects/ngx-aurora-pattern-library/src/lib/button copy/button.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "uvx-button",
+            "styleUrls": [
+                "./button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./button.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "defaultValue": "'primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "\"primary\" | \"gray\" | \"help\"",
+                    "decorators": []
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "icon",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "mode",
+                    "defaultValue": "'text'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "\"text\" | \"primary\" | \"primary-text\" | \"secondary\" | \"tertiary\" | \"round\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, Input } from '@angular/core';\n\n@Component({\n    selector: 'uvx-button',\n    templateUrl: './button.component.html',\n    styleUrls: ['./button.component.scss'],\n    changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class ButtonComponent {\n    @Input() public label = 'Button';\n    @Input() public mode: 'text' | 'primary' | 'primary-text' | 'secondary' | 'tertiary' | 'round' = 'text';\n    @Input() public color: 'primary' | 'gray' | 'help' = 'primary';\n    @Input() public icon = '';\n    @Input() public disabled = false;\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".button {\n    // font-family: var(--uv-font-family);\n    border: 0;\n    border-radius: 4px;\n    cursor: pointer;\n    display: inline-block;\n    line-height: 1;\n    background-color: transparent;\n    display: flex;\n    align-items: center;\n\n    &>* {\n        display: inline-block;\n    }\n}\n\n.text {\n    line-height: 20px;\n    // font-weight: var(--uv-font-bold);\n    background-color: transparent;\n    color: var(--apl-color-primary-default);\n\n    &.disabled {\n        color: var(--apl-color-darks-gray);\n        cursor: not-allowed;\n    }\n}\n\n.gray {\n    color: var(--apl-color-darks-gray);\n}\n\n.help {\n    // color: var(--uv-color-help);\n}\n\n.primary {\n    font-size: 14px;\n    line-height: 24px;\n    // font-weight: var(--uv-font-bold);\n    height: 40px;\n    padding: 0 25px;\n    color: white;\n    background-color: var(--apl-color-primary-default);\n    border: 0;\n\n    &.disabled {\n        // color: var(--uv-color-white);\n        // background-color: var(--uv-color-gray);\n        font-weight: none;\n        cursor: not-allowed;\n        &:hover{\n            // color: var(--uv-color-white);\n            // background-color: var(--uv-color-gray);\n            font-weight: none;\n            cursor: not-allowed;\n        }\n    }\n\n    &:hover {\n        background-color: var(--apl-color-primary-hover);\n    }\n\n    &-text {\n        background-color: var(--uv-color-white);\n        color: var(--apl-color-primary-default);\n\n        &:hover {\n            background-color: var(--uv-color-white);\n            color: var(--apl-color-primary-hover);\n        }\n    }\n}\n\n.secondary {\n    font-size: 14px;\n    line-height: 24px;\n    // font-weight: var(--uv-font-bold);\n    height: 40px;\n    padding: 0 25px;\n    // color: var(--uv-color-black);\n    // background-color: var(--uv-color-white);\n    // border: 1px solid var(--uv-color-gray-3);\n\n    &.disabled {\n        // color: var(--uv-color-white);\n            // background-color: var(--uv-color-gray);\n            font-weight: none;\n            cursor: not-allowed;\n        &:hover{\n            // color: var(--uv-color-white);\n            // background-color: var(--uv-color-gray);\n            font-weight: none;\n            cursor: not-allowed;\n        }\n    }\n\n    &:hover {\n        // background-color: var(--uv-color-gray-light);\n    }\n}\n\n.round {\n    background-color: white;\n    width: 41px;\n    height: 41px;\n    padding: 10.5px;\n    border-radius: 100%;\n    // border: var(--uv-border-gray);\n\n    &-large{\n        width: 57px;\n        height: 57px;\n        color: var(--apl-color-primary-default);\n        font-weight: bold;\n        font-size: 24px;\n        text-align:center;\n    }\n}\n\n",
+                    "styleUrl": "./button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<button    \n    class=\"button\" \n    [class.primary]=\"mode === 'primary' || mode === 'primary-text'\"\n    [class.secondary]=\"mode === 'secondary'\"\n    [class.help]=\"color === 'help'\"\n    [class.text]=\"mode === 'text'\"\n    [class.primary-text]=\"mode === 'primary-text'\"\n    [class.round]=\"mode === 'round'\"\n    [class.gray]=\"color === 'gray'\"\n    [class.tertiary]=\"mode === 'tertiary'\"\n    [class.disabled]=\"disabled\">\n        <!-- <mat-icon *ngIf=\"icon != '' \" class=\"position-svg button-icon margin-right-xxxs\">{{icon}}</mat-icon> -->\n    {{label}}\n</button>\n\n\n"
+        },
+        {
             "name": "ColorsExampleComponent",
-            "id": "component-ColorsExampleComponent-83c7331dd0ea0253c03351322a2379cddd781e42e5d37c2725c5421e9eebe49e46fd42ec66bb41d1670702b5222bfad1a84663e08042b99d49121e44d44c78bc",
+            "id": "component-ColorsExampleComponent-2e9a337ee3549af7a1f11b467669a4b82ac6a11aad94ec48ef418f514ef0ecad2f7eb9b4e33d8191fca63a8adb03acd68172821f56bdcb076b2daa1e28eac163",
             "file": "stories/colors-stories/colors-example.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [
@@ -162,7 +368,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';\r\n\r\n@Component({\r\n    selector: 'epd-pl-colors-example',\r\n    templateUrl: './colors-example.component.html',\r\n    styleUrls: [ './colors-example.component.scss' ],\r\n    changeDetection: ChangeDetectionStrategy.OnPush,\r\n    encapsulation: ViewEncapsulation.None\r\n})\r\nexport class ColorsExampleComponent {\r\n\r\n}\r\n",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';\n\n@Component({\n    selector: 'epd-pl-colors-example',\n    templateUrl: './colors-example.component.html',\n    styleUrls: [ './colors-example.component.scss' ],\n    changeDetection: ChangeDetectionStrategy.OnPush,\n    encapsulation: ViewEncapsulation.None\n})\nexport class ColorsExampleComponent {\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -171,7 +377,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"aurora-theme\">\r\n    <p>EPD PL Colors & Style Variables | Click to copy the PL variable name</p>\r\n</div>\r\n"
+            "templateData": "<div class=\"aurora-theme\">\n    <p>EPD PL Colors & Style Variables | Click to copy the PL variable name</p>\n</div>\n"
         },
         {
             "name": "NgxAuroraPatternLibraryComponent",
@@ -229,6 +435,50 @@
     ],
     "modules": [
         {
+            "name": "AuroraBackdropModule",
+            "id": "module-AuroraBackdropModule-b701ab664aeec196144d7ae5f775935e1754341dcb0ef544d56716edcabf5c4bc0e1381fb739a64962219ac30a5d131772a124e520216be551c171699e31486b",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "projects/ngx-aurora-pattern-library/src/lib/backdrop/backdrop.module.ts",
+            "methods": [],
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { NgModule } from '@angular/core';\r\nimport { AuroraBackdropComponent } from './backdrop.component';\r\n\r\n@NgModule({\r\n  imports: [CommonModule],\r\n  declarations: [AuroraBackdropComponent],\r\n  exports: [AuroraBackdropComponent]\r\n})\r\nexport class AuroraBackdropModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AuroraBackdropComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "AuroraBackdropComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
             "name": "AuroraButtonModule",
             "id": "module-AuroraButtonModule-f45860f20cb746f45c2451d04476761a3d5fab70eb1b8b8b25c8c71bddbc6a86b20f402a61aff694aa5ced0435c0b1aba6652605fa845548d61379f75099563f",
             "description": "",
@@ -273,14 +523,58 @@
             ]
         },
         {
+            "name": "ButtonModule",
+            "id": "module-ButtonModule-c0910f08495a3ab8748ef719dc97dd2cde18faa40c3245ed201794c9935efe0367ee8b8c11069d67b4478ed9b9e41775fd80c667bc64a4ff41dbb616c27439d0",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "projects/ngx-aurora-pattern-library/src/lib/button copy/button.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ButtonComponent } from './button.component';\n\n@NgModule({\n    declarations: [ ButtonComponent ],\n    imports: [\n        CommonModule\n    ],\n    exports: [ ButtonComponent ]\n})\nexport class ButtonModule {\n}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "ButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "ButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
             "name": "ColorsExampleModule",
-            "id": "module-ColorsExampleModule-09b913753fc4281a3efeadb87ec7eac2b30b597bfdcf193adb7a16088b4173aa46ccd5750a6a210d564b973afe1d83df43d8141f535aa9dabae56f54a9d670e4",
+            "id": "module-ColorsExampleModule-0eac841ac3af799ee498a84eab7bbe1e30f0f37fe1f1e763d05b051840861e2d805cce4735d4b9114ca9b3635bead257dfdc42203b3c43a2fe9f451293dac5af",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "stories/colors-stories/colors-example.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { ColorsExampleComponent } from './colors-example.component';\r\n\r\n@NgModule({\r\n    declarations: [\r\n        ColorsExampleComponent\r\n    ],\r\n    imports: [\r\n        CommonModule,\r\n        BrowserAnimationsModule,\r\n    ],\r\n    exports: [\r\n        ColorsExampleComponent\r\n    ]\r\n})\r\nexport class ColorsExampleModule {\r\n}\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { ColorsExampleComponent } from './colors-example.component';\n\n@NgModule({\n    declarations: [\n        ColorsExampleComponent\n    ],\n    imports: [\n        CommonModule,\n        BrowserAnimationsModule,\n    ],\n    exports: [\n        ColorsExampleComponent\n    ]\n})\nexport class ColorsExampleModule {\n}\n",
             "children": [
                 {
                     "type": "providers",
@@ -404,6 +698,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-aurora-pattern-library/src/lib/button copy/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -420,7 +724,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<AuroraButtonComponent>",
-                "defaultValue": "() => ({\n  component: AuroraButtonComponent,\n  template: `\n  <aurora-button>\n  Button Story\n  </aurora-button>\n  hello hello hello`,\n})"
+                "defaultValue": "() => ({\n    component: AuroraButtonComponent,\n    template: `\n  <aurora-button>\n  Button Story\n  </aurora-button>\n  hello hello hello`,\n})"
             },
             {
                 "name": "Template",
@@ -430,7 +734,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ColorsExampleComponent>",
-                "defaultValue": "(args: ColorsExampleComponent) => ( {\r\n    props: args\r\n} )"
+                "defaultValue": "(args: ColorsExampleComponent) => ( {\n    props: args\n} )"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-aurora-pattern-library/src/lib/button copy/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\n    component: ButtonComponent,\n    props: args,\n})"
             },
             {
                 "name": "Template",
@@ -441,6 +755,26 @@
                 "deprecationMessage": "",
                 "type": "Story<AuroraButtonComponent>",
                 "defaultValue": "() => ({\r\n  component: AuroraButtonComponent,\r\n  template: `<aurora-button>Button</aurora-button>`,\r\n})"
+            },
+            {
+                "name": "Text",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-aurora-pattern-library/src/lib/button copy/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "TextWithIcon",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-aurora-pattern-library/src/lib/button copy/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             }
         ],
         "functions": [],
@@ -466,7 +800,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<AuroraButtonComponent>",
-                    "defaultValue": "() => ({\n  component: AuroraButtonComponent,\n  template: `\n  <aurora-button>\n  Button Story\n  </aurora-button>\n  hello hello hello`,\n})"
+                    "defaultValue": "() => ({\n    component: AuroraButtonComponent,\n    template: `\n  <aurora-button>\n  Button Story\n  </aurora-button>\n  hello hello hello`,\n})"
                 }
             ],
             "projects/ngx-aurora-pattern-library/src/lib/button/button.stories.ts": [
@@ -531,7 +865,49 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<ColorsExampleComponent>",
-                    "defaultValue": "(args: ColorsExampleComponent) => ( {\r\n    props: args\r\n} )"
+                    "defaultValue": "(args: ColorsExampleComponent) => ( {\n    props: args\n} )"
+                }
+            ],
+            "projects/ngx-aurora-pattern-library/src/lib/button copy/button.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-aurora-pattern-library/src/lib/button copy/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-aurora-pattern-library/src/lib/button copy/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<ButtonComponent>",
+                    "defaultValue": "(args: ButtonComponent) => ({\n    component: ButtonComponent,\n    props: args,\n})"
+                },
+                {
+                    "name": "Text",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-aurora-pattern-library/src/lib/button copy/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "TextWithIcon",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-aurora-pattern-library/src/lib/button copy/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
                 }
             ]
         },
@@ -544,6 +920,64 @@
         "count": 0,
         "status": "low",
         "files": [
+            {
+                "filePath": "projects/ngx-aurora-pattern-library/src/lib/backdrop/backdrop.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AuroraBackdropComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-aurora-pattern-library/src/lib/button copy/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-aurora-pattern-library/src/lib/button copy/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-aurora-pattern-library/src/lib/button copy/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-aurora-pattern-library/src/lib/button copy/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Text",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-aurora-pattern-library/src/lib/button copy/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TextWithIcon",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
             {
                 "filePath": "projects/ngx-aurora-pattern-library/src/lib/button/button.component.ts",
                 "type": "component",
