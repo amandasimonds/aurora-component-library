@@ -1,0 +1,18 @@
+<div class="aurora-theme">
+    <p>Colors</p>
+    <div class="wrapper">
+        <div
+            class="color-container"
+            *ngFor="let color of colorsArray; let i = index"
+        >
+            <div class="color-item">
+                <span> {{ color[0] }} </span>
+                <span> value: {{ color[1].value }} </span>
+                <div
+                    class="color-block"
+                    [ngStyle]="{ 'background-color': color[1].value }"
+                ></div>
+            </div>
+        </div>
+    </div>
+</div>

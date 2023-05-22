@@ -1,12 +1,9 @@
 import { CommonModule } from '@angular/common'
 import { moduleMetadata } from '@storybook/angular'
 import { Story } from '@storybook/angular/types-6-0'
-import { AuroraButtonComponent } from '../projects/ngx-aurora-pattern-library/src/public-api'
+import { AuroraButtonComponent } from './button.component'
 // This exports the Stories group for this component
 export default {
-    // The title defines the name and where in the structure of
-    // Storybook's menu this is going to be placed.
-    // Here we add it to a "Components" section under "Link"
     title: 'Components/Button',
     // The component related to the Stories
     component: AuroraButtonComponent,
@@ -19,13 +16,32 @@ export default {
     ],
 }
 // This creates a Story for the component
-const Template: Story<AuroraButtonComponent> = () => ({
+const Template: Story<AuroraButtonComponent> = (args: AuroraButtonComponent) => ({
     component: AuroraButtonComponent,
-    template: `
-  <aurora-button>
-  Button Story
-  </aurora-button>
-  hello hello hello`,
+    props: args,
+    template: `<aurora-button>Button</aurora-button>`,
 })
-export const Base = Template.bind({})
-// Other stories could be added here as well, all you have to do is export them along!
+
+export const Text = Template.bind({})
+Text.args = {
+    mode: 'text',
+}
+
+export const TextWithIcon = Template.bind({})
+TextWithIcon.args = {
+    mode: 'text',
+    icon: 'back',
+}
+
+export const Primary = Template.bind({})
+Primary.args = {
+    mode: 'primary',
+    disabled: false,
+}
+
+export const Secondary = Template.bind({})
+Secondary.args = {
+    mode: 'secondary',
+    disabled: false,
+}
+

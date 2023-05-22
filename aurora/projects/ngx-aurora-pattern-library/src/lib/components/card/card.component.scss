@@ -1,0 +1,16 @@
+.card {
+    padding: 1rem;
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    gap: 8px;
+    flex-direction: column;
+
+    &-sm {
+        width: 200px;
+    }
+
+    &-md {
+        width: 365px;
+    }
+}

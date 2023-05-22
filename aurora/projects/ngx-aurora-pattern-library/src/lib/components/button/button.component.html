@@ -1,0 +1,9 @@
+<button
+    class="aurora"
+    [disabled]="disabled"
+    [class.primary]="mode === 'primary'"
+    [class.secondary]="mode === 'secondary'"
+    [class.text]="mode === 'text'"
+>
+    <ng-content></ng-content>
+</button>
