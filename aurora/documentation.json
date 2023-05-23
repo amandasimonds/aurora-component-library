@@ -150,7 +150,7 @@
         },
         {
             "name": "AuroraButtonComponent",
-            "id": "component-AuroraButtonComponent-01e376c8ad1b9a0d770d9b62d72658ce8ea40a4a0d8959125131dc4fe100ee7e974cb8df3bb80a7e74f96548303632a96cdf68f18a683f572a367c946626972d",
+            "id": "component-AuroraButtonComponent-2bc10f0090aa71e242e4f56d43ed12c8a0a5bb580f8d200a567660fafd57ae2b47d16294ee6515c0fdab67e6111b779899ceced9e5d5f79175a430d17ff0325c",
             "file": "projects/ngx-aurora-pattern-library/src/lib/components/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -172,7 +172,7 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 11,
+                    "line": 10,
                     "type": "\"primary\" | string",
                     "decorators": []
                 },
@@ -181,7 +181,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 12,
                     "type": "boolean",
                     "decorators": []
                 },
@@ -190,36 +190,31 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 12,
+                    "line": 11,
                     "type": "string",
                     "decorators": []
                 },
                 {
-                    "name": "mode",
+                    "name": "kind",
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 10,
+                    "line": 9,
                     "type": "\"text\" | \"primary\" | \"secondary\"",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
                     "decorators": []
                 }
             ],
             "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "classes",
-                    "defaultValue": "[]",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "[]",
-                    "optional": false,
-                    "description": "",
-                    "line": 9,
-                    "modifierKind": [
-                        123
-                    ]
-                }
-            ],
+            "propertiesClass": [],
             "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
@@ -228,20 +223,31 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n    selector: 'aurora-button',\n    templateUrl: './button.component.html',\n    styleUrls: ['./button.component.scss'],\n})\nexport class AuroraButtonComponent {\n    public classes = [];\n    @Input() public mode: 'text' | 'primary' | 'secondary' = 'primary';\n    @Input() public color: 'primary' | '' = 'primary';\n    @Input() public icon = '';\n    @Input() public disabled = false;\n\n    \n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n    selector: 'aurora-button',\n    templateUrl: './button.component.html',\n    styleUrls: ['./button.component.scss'],\n})\nexport class AuroraButtonComponent {\n    @Input() public kind: 'text' | 'primary' | 'secondary' = 'primary';\n    @Input() public color: 'primary' | '' = 'primary';\n    @Input() public icon = '';\n    @Input() public disabled = false;\n    @Input() public label = 'Button' \n\n    public get classes(): string[] {\n        return [this.kind]\n    }\n\n    \n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "button {\n    font-family: inherit;\n    border: 0;\n    border-radius: 2px;\n    cursor: pointer;\n    display: inline-block;\n    display: flex;\n    align-items: center;\n\n    &>* {\n        display: inline-block;\n    }\n\n    &:disabled {\n        cursor: not-allowed;\n    }\n}\n\n.primary {\n    font-size: 14px;\n    line-height: 24px;\n    // font-weight: var(--uv-font-bold);\n    height: 40px;\n    padding: 0 25px;\n    color: white;\n    background-color: var(--apl-color-primary-default);\n    border: 0;\n\n    &:disabled {\n        background-color: gray;\n    }\n\n    &:hover:not(:disabled) {\n        background-color: var(--apl-color-primary-hover);\n    }\n\n    &-text {\n        color: var(--apl-color-primary-default);\n\n        &:hover {\n            color: var(--apl-color-primary-hover);\n        }\n    }\n}\n\n.secondary {\n    font-size: 14px;\n    line-height: 24px;\n    height: 40px;\n    padding: 0 25px;\n    background-color: var(--apl-color-secondary-default);\n\n    &:hover {\n        background-color: var(--apl-color-secondary-hover);\n    }\n}\n\n.text {\n    color: var(--apl-color-primary-default);\n\n    &:disabled {\n        color: var(--apl-color-darks-gray);\n    }\n\n    &:hover:not(:disabled) {\n        color: var(--apl-color-primary-hover);\n    }\n}\n\n",
+                    "data": "button {\n    font-family: inherit;\n    border: 0;\n    border-radius: 2px;\n    cursor: pointer;\n    display: inline-block;\n    display: flex;\n    align-items: center;\n    background-color: transparent;\n\n    &>* {\n        display: inline-block;\n    }\n\n    &:disabled {\n        cursor: not-allowed;\n    }\n}\n\n.primary {\n    font-size: 14px;\n    line-height: 24px;\n    // font-weight: var(--uv-font-bold);\n    height: 40px;\n    padding: 0 25px;\n    color: white;\n    background-color: var(--apl-color-primary-default);\n    border: 0;\n\n    &:disabled {\n        background-color: gray;\n    }\n\n    &:hover:not(:disabled) {\n        background-color: var(--apl-color-primary-hover);\n    }\n\n    &-text {\n        color: var(--apl-color-primary-default);\n\n        &:hover {\n            color: var(--apl-color-primary-hover);\n        }\n    }\n}\n\n.secondary {\n    font-size: 14px;\n    line-height: 24px;\n    height: 40px;\n    padding: 0 25px;\n    background-color: var(--apl-color-secondary-default);\n\n    &:hover {\n        background-color: var(--apl-color-secondary-hover);\n    }\n}\n\n.text {\n    color: var(--apl-color-primary-default);\n\n    &:disabled {\n        color: var(--apl-color-darks-gray);\n    }\n\n    &:hover:not(:disabled) {\n        color: var(--apl-color-primary-hover);\n    }\n}\n\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<button\n    class=\"aurora\"\n    [disabled]=\"disabled\"\n    [class.primary]=\"mode === 'primary'\"\n    [class.secondary]=\"mode === 'secondary'\"\n    [class.text]=\"mode === 'text'\"\n>\n    <ng-content></ng-content>\n</button>\n"
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 15
+                    }
+                }
+            },
+            "templateData": "<button\n    [ngClass]=\"classes\"\n    [disabled]=\"disabled\"\n>\n    {{label}}\n</button>\n"
         },
         {
-            "name": "AuroraCardComponent",
-            "id": "component-AuroraCardComponent-2580678c4fe0663f418bb5f5e8a56a095532d6fe9efcd87fd2f8359f6d01c43cf224101b7c6ceed81c3d23d838912fdcf4d459e14ac71c9af3bfd6f37a4da501",
+            "name": "CardComponent",
+            "id": "component-CardComponent-2528d25abb6c77eb3272f1c59c21928e710f518e736e5eadec5fc5294388389ffa4aadde28c6515837f2b0346a0ccc1af152148f133a48a0cab44513efca3c61",
             "file": "projects/ngx-aurora-pattern-library/src/lib/components/card/card.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -279,7 +285,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, ChangeDetectionStrategy, Input } from '@angular/core';\n\n@Component({\n  selector: 'aurora-card',\n  templateUrl: './card.component.html',\n  styleUrls: ['./card.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class AuroraCardComponent  {\n\n    @Input() public size: 'auto' | 'sm' | 'md' = 'auto';\n\n}\n",
+            "sourceCode": "import { Component, ChangeDetectionStrategy, Input } from '@angular/core';\n\n@Component({\n  selector: 'aurora-card',\n  templateUrl: './card.component.html',\n  styleUrls: ['./card.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class CardComponent  {\n\n    @Input() public size: 'auto' | 'sm' | 'md' = 'auto';\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -292,7 +298,7 @@
         },
         {
             "name": "ColorsExampleComponent",
-            "id": "component-ColorsExampleComponent-9a52797f07be2c5b97193c2a5cf69057484a4a53c21cdd7a089ec13c6468035619dc2f661cc30462c3cab792fdf95132dc58068d72a78be2c673f231396840ff",
+            "id": "component-ColorsExampleComponent-17462ca7ff9eeeee1dd31aaf6e715454c9c47cd1fc4616d08462c1a4301bc7c1ac3b2ae7a3ab8f47ac6d0c88bd2e9a3fc798eeb9edf43f72518da487b218d61c",
             "file": "storybook-pages/colors/colors-example.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [
@@ -322,7 +328,19 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 15,
+                    "line": 16,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "colorsArray",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 17,
                     "modifierKind": [
                         123
                     ]
@@ -335,7 +353,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 17,
+                    "line": 23,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -347,16 +365,27 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {\n    ChangeDetectionStrategy,\n    Component,\n    ViewEncapsulation,\n} from '@angular/core';\nimport * as colors from '../../projects/ngx-aurora-pattern-library/src/lib/styles/tokens/tokens.json';\n@Component({\n    selector: 'epd-pl-colors-example',\n    templateUrl: './colors-example.component.html',\n    styleUrls: ['./colors-example.component.scss'],\n    changeDetection: ChangeDetectionStrategy.OnPush,\n    encapsulation: ViewEncapsulation.None,\n})\nexport class ColorsExampleComponent {\n    public colors = colors;\n\n    ngOnInit() {\n        console.log(colors)\n    }\n}\n",
+            "sourceCode": "import {\n    ChangeDetectionStrategy,\n    Component,\n    OnInit,\n    ViewEncapsulation,\n} from '@angular/core';\nimport * as colors from '../../projects/ngx-aurora-pattern-library/src/lib/styles/tokens/tokens.json';\n@Component({\n    selector: 'epd-pl-colors-example',\n    templateUrl: './colors-example.component.html',\n    styleUrls: ['./colors-example.component.scss'],\n    changeDetection: ChangeDetectionStrategy.OnPush,\n    encapsulation: ViewEncapsulation.None,\n})\nexport class ColorsExampleComponent implements OnInit {\n    public colors = colors;\n    public colorsArray;\n\n    constructor() {\n        this.colorsArray =  Object.entries(this.colors['apl-color']);\n    }\n\n    ngOnInit() {\n        console.log(typeof this.colorsArray, this.colorsArray)\n    }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": ".color {\r\n    &-container {\r\n        border-radius: 4px;\r\n        display: flex;\r\n        align-items: center;\r\n        justify-content: center;\r\n    }\r\n\r\n    &-item {\r\n        font-size: 0.75rem;\r\n        display: flex;\r\n        flex-direction: column;\r\n    }\r\n\r\n    &-block {\r\n        height: 6rem;\r\n        width: 6rem;\r\n    }\r\n}\r\n\r\n.wrapper {\r\n    display: flex;\r\n    gap: 2rem;\r\n    flex-wrap: wrap;\r\n}\r\n",
                     "styleUrl": "./colors-example.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"aurora-theme\">\n    <p>Colors</p>\n    <div class=\"flex\">\n        <div class=\"color-container\" *ngFor=\"let color of colors\">\n\n        </div>\n    </div>\n</div>\n"
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 17
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"aurora-theme\">\n    <p>Colors</p>\n    <div class=\"wrapper\">\n        <div\n            class=\"color-container\"\n            *ngFor=\"let color of colorsArray; let i = index\"\n        >\n            <div class=\"color-item\">\n                <span> {{ color[0] }} </span>\n                <span> value: {{ color[1].value }} </span>\n                <div\n                    class=\"color-block\"\n                    [ngStyle]=\"{ 'background-color': color[1].value }\"\n                ></div>\n            </div>\n        </div>\n    </div>\n</div>\n"
         },
         {
             "name": "NgxAuroraPatternLibraryComponent",
@@ -502,14 +531,14 @@
             ]
         },
         {
-            "name": "AuroraCardModule",
-            "id": "module-AuroraCardModule-795a9a0b14479538faabf3db20f9d53e1c7c8674a33b80bf2e608fe30a4883752c2e8bc53e9cf1be8a602a92cde3b0edf1fc7cda03270de3fc4769c503af5152",
+            "name": "CardModule",
+            "id": "module-CardModule-82edd1d7e440bbc456533e8cd052718d3c98fa1798110dae00062b7c94a61722aa8566e5f32c9d9a58937a8f27ad21cb3d21dcd9813555834d4ed3911800f7b2",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/ngx-aurora-pattern-library/src/lib/components/card/card.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { AuroraCardComponent } from './card.component';\n\n@NgModule({\n    declarations: [ AuroraCardComponent ],\n    exports: [ AuroraCardComponent ]\n})\nexport class AuroraCardModule {\n}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CardComponent } from './card.component';\n\n@NgModule({\n    declarations: [ CardComponent ],\n    exports: [ CardComponent ]\n})\nexport class CardModule {\n}\n",
             "children": [
                 {
                     "type": "providers",
@@ -519,7 +548,7 @@
                     "type": "declarations",
                     "elements": [
                         {
-                            "name": "AuroraCardComponent"
+                            "name": "CardComponent"
                         }
                     ]
                 },
@@ -531,7 +560,7 @@
                     "type": "exports",
                     "elements": [
                         {
-                            "name": "AuroraCardComponent"
+                            "name": "CardComponent"
                         }
                     ]
                 },
@@ -703,7 +732,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<AuroraButtonComponent>",
-                "defaultValue": "(args: AuroraButtonComponent) => ({\r\n    component: AuroraButtonComponent,\r\n    props: args,\r\n    template: `<aurora-button>Button</aurora-button>`,\r\n})"
+                "defaultValue": "(\n    args: AuroraButtonComponent\n) => ({\n    component: AuroraButtonComponent,\n    props: args,\n})"
             },
             {
                 "name": "Text",
@@ -802,7 +831,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<AuroraButtonComponent>",
-                    "defaultValue": "(args: AuroraButtonComponent) => ({\r\n    component: AuroraButtonComponent,\r\n    props: args,\r\n    template: `<aurora-button>Button</aurora-button>`,\r\n})"
+                    "defaultValue": "(\n    args: AuroraButtonComponent\n) => ({\n    component: AuroraButtonComponent,\n    props: args,\n})"
                 },
                 {
                     "name": "Text",
@@ -907,7 +936,7 @@
                 "filePath": "projects/ngx-aurora-pattern-library/src/lib/components/card/card.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "AuroraCardComponent",
+                "name": "CardComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
                 "status": "low"
@@ -956,7 +985,7 @@
                 "linktype": "component",
                 "name": "ColorsExampleComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
