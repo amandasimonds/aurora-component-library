@@ -6,11 +6,11 @@ import {
     Typeset,
     Preview,
     Canvas,
-} from '@storybook/addon-docs/blocks'
-import { moduleMetadata } from '@storybook/angular'
-import { CardComponent } from './card.component'
-import { ButtonModule } from '../button/button.module.ts'
-import dedent from 'ts-dedent'
+} from '@storybook/addon-docs/blocks';
+import { moduleMetadata } from '@storybook/angular';
+import { CardComponent } from './card.component';
+import { AuroraButtonModule } from '../button/button.module.ts';
+import dedent from 'ts-dedent';
 
 <Meta
     title="Components/Card"
@@ -18,7 +18,7 @@ import dedent from 'ts-dedent'
     argTypes={{ text: { control: 'text' } }}
     decorators={[
         moduleMetadata({
-            imports: [ButtonModule],
+            imports: [AuroraButtonModule],
         }),
     ]}
 />
@@ -41,7 +41,7 @@ import dedent from 'ts-dedent'
     <aurora-card size='auto'>
         <p class='bold'>Card heading</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <aurora-button label="Button" mode="primary" class="margin-top-xxs"></aurora-button>
+        <aurora-button label="Button" kind="primary" class="margin-top-xxs"></aurora-button>
     </aurora-card>
     `,
         }}
@@ -68,7 +68,7 @@ import dedent from 'ts-dedent'
     <aurora-card size='sm'>
         <p class='bold'>Card heading</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        <aurora-button label="Button" mode="primary" class="margin-top-xxs"></aurora-button>
+        <aurora-button label="Button" kind="primary" class="margin-top-xxs"></aurora-button>
     </aurora-card>
     `,
         }}
@@ -81,7 +81,7 @@ import dedent from 'ts-dedent'
      <aurora-card size='sm'>
         <p class='bold'>Card heading</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        <aurora-button label="Button" mode="primary" class="margin-top-xxs"></aurora-button>
+        <aurora-button label="Button" kind="primary" class="margin-top-xxs"></aurora-button>
     </aurora-card>
   `}
 />
@@ -95,7 +95,7 @@ import dedent from 'ts-dedent'
     <aurora-card size='md'>
         <p class='bold'>Card heading</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <aurora-button label="Button" mode="primary" class="margin-top-xxs"></aurora-button>
+        <aurora-button label="Button" kind="primary" class="margin-top-xxs"></aurora-button>
     </aurora-card>
     `,
         }}
@@ -108,7 +108,7 @@ import dedent from 'ts-dedent'
      <aurora-card size='md'>
         <p class='bold'>Card heading</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <aurora-button label="Button" mode="primary" class="margin-top-xxs"></aurora-button>
+        <aurora-button label="Button" kind="primary" class="margin-top-xxs"></aurora-button>
     </aurora-card>
   `}
 />

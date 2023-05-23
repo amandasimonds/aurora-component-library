@@ -6,11 +6,15 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['./button.component.scss'],
 })
 export class AuroraButtonComponent {
-    public classes = [];
-    @Input() public mode: 'text' | 'primary' | 'secondary' = 'primary';
+    @Input() public kind: 'text' | 'primary' | 'secondary' = 'primary';
     @Input() public color: 'primary' | '' = 'primary';
     @Input() public icon = '';
     @Input() public disabled = false;
+    @Input() public label = 'Button' 
+
+    public get classes(): string[] {
+        return [this.kind]
+    }
 
     
 }

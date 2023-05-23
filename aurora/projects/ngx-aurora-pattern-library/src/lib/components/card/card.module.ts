@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { AuroraCardComponent } from './card.component';
+import { CardComponent } from './card.component';
 
 @NgModule({
-    declarations: [ AuroraCardComponent ],
-    exports: [ AuroraCardComponent ]
+    declarations: [ CardComponent ],
+    exports: [ CardComponent ]
 })
-export class AuroraCardModule {
+export class CardModule {
 }

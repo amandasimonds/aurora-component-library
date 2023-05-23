@@ -1,7 +1,7 @@
-import { CommonModule } from '@angular/common'
-import { moduleMetadata } from '@storybook/angular'
-import { Story } from '@storybook/angular/types-6-0'
-import { AuroraButtonComponent } from './button.component'
+import { CommonModule } from '@angular/common';
+import { moduleMetadata } from '@storybook/angular';
+import { Story } from '@storybook/angular/types-6-0';
+import { AuroraButtonComponent } from './button.component';
 // This exports the Stories group for this component
 export default {
     title: 'Components/Button',
@@ -14,34 +14,38 @@ export default {
             imports: [CommonModule],
         }),
     ],
-}
+};
 // This creates a Story for the component
-const Template: Story<AuroraButtonComponent> = (args: AuroraButtonComponent) => ({
+const Template: Story<AuroraButtonComponent> = (
+    args: AuroraButtonComponent
+) => ({
     component: AuroraButtonComponent,
     props: args,
-    template: `<aurora-button>Button</aurora-button>`,
-})
+});
 
-export const Text = Template.bind({})
+export const Text = Template.bind({});
 Text.args = {
-    mode: 'text',
-}
+    label: 'Text Button',
+    kind: 'text',
+};
 
-export const TextWithIcon = Template.bind({})
+export const TextWithIcon = Template.bind({});
 TextWithIcon.args = {
-    mode: 'text',
+    label: 'Text With Icon Button',
+    kind: 'text',
     icon: 'back',
-}
+};
 
-export const Primary = Template.bind({})
+export const Primary = Template.bind({});
 Primary.args = {
-    mode: 'primary',
+    label: 'Primary Button',
+    kind: 'primary',
     disabled: false,
-}
+};
 
-export const Secondary = Template.bind({})
+export const Secondary = Template.bind({});
 Secondary.args = {
-    mode: 'secondary',
+    label: 'Secondary Button',
+    kind: 'secondary',
     disabled: false,
-}
-
+};

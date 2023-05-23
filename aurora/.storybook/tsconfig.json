@@ -13,7 +13,6 @@
   ],
   "include": [
     "../src/**/*",
-    "../storybook-pages/**/*",
     "../projects/**/*",
   ],
   "files": [

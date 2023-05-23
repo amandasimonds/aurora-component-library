@@ -6,7 +6,7 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
   styleUrls: ['./card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AuroraCardComponent  {
+export class CardComponent  {
 
     @Input() public size: 'auto' | 'sm' | 'md' = 'auto';
 
