@@ -5,7 +5,8 @@ module.exports = {
     stories: [
         '*.stories.ts',
         '../projects/ngx-aurora-pattern-library/src/lib/**/*.stories.ts',
-        '../projects/ngx-aurora-pattern-library/src/lib/**/*.stories.mdx'
+        '../projects/ngx-aurora-pattern-library/src/lib/**/*.stories.mdx',
+        '../storybook-pages/**/*.stories.ts'
     ],
     addons: [
         '@storybook/addon-links',
