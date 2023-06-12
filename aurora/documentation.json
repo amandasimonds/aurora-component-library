@@ -297,6 +297,56 @@
             "templateData": "<div class=\"box card\" \n    [class.card-sm]=\"size === 'sm'\"\n    [class.card-md]=\"size === 'md'\">\n    <ng-content></ng-content>\n</div>\n"
         },
         {
+            "name": "ChipComponent",
+            "id": "component-ChipComponent-e1ba8b456b1061227b4d1b5f9c85dd11a809e78d5e7f7c1245ae8379f0ddbad0fa7dafb23a6c55004aaab62ace8f40841fc08104a0cd55c1cc5a8293f24ece43",
+            "file": "projects/ngx-aurora-pattern-library/src/lib/components/chip/chip.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "aurora-chip",
+            "styleUrls": [
+                "./chip.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./chip.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "label",
+                    "defaultValue": "'Chip Label'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n    selector: 'aurora-chip',\n    templateUrl: './chip.component.html',\n    styleUrls: ['./chip.component.scss'],\n})\nexport class ChipComponent {\n    @Input() label = 'Chip Label';\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".chip {\r\n    border-radius: 16px;\r\n    background-color: var(--apl-color-blue);\r\n    color: var(--apl-color-secondary-default);\r\n    height: 1.75rem;\r\n    display: flex;\r\n    width: max-content;\r\n    align-items: center;\r\n    padding: 0 0.75rem;\r\n    font-size: 1rem;\r\n\r\n    &:hover {\r\n        background-color: var(--apl-color-blue-2);\r\n        cursor: pointer;\r\n    }\r\n}\r\n",
+                    "styleUrl": "./chip.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"chip\">{{label}}</div>"
+        },
+        {
             "name": "ColorsExampleComponent",
             "id": "component-ColorsExampleComponent-17462ca7ff9eeeee1dd31aaf6e715454c9c47cd1fc4616d08462c1a4301bc7c1ac3b2ae7a3ab8f47ac6d0c88bd2e9a3fc798eeb9edf43f72518da487b218d61c",
             "file": "storybook-pages/colors/colors-example.component.ts",
@@ -369,7 +419,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".color {\r\n    &-container {\r\n        border-radius: 4px;\r\n        display: flex;\r\n        align-items: center;\r\n        justify-content: center;\r\n    }\r\n\r\n    &-item {\r\n        font-size: 0.75rem;\r\n        display: flex;\r\n        flex-direction: column;\r\n    }\r\n\r\n    &-block {\r\n        height: 6rem;\r\n        width: 6rem;\r\n    }\r\n}\r\n\r\n.wrapper {\r\n    display: flex;\r\n    gap: 2rem;\r\n    flex-wrap: wrap;\r\n}\r\n",
+                    "data": ".color {\n    &-container {\n        border-radius: 4px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n    }\n\n    &-item {\n        font-size: 0.75rem;\n        display: flex;\n        flex-direction: column;\n    }\n\n    &-block {\n        height: 6rem;\n        width: 6rem;\n    }\n}\n\n.wrapper {\n    display: flex;\n    gap: 2rem;\n    flex-wrap: wrap;\n}\n",
                     "styleUrl": "./colors-example.component.scss"
                 }
             ],
@@ -686,6 +736,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-aurora-pattern-library/src/lib/components/chip/chip.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -733,6 +793,16 @@
                 "deprecationMessage": "",
                 "type": "Story<AuroraButtonComponent>",
                 "defaultValue": "(\n    args: AuroraButtonComponent\n) => ({\n    component: AuroraButtonComponent,\n    props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-aurora-pattern-library/src/lib/components/chip/chip.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ChipComponent>",
+                "defaultValue": "(\r\n    args: ChipComponent\r\n) => ({\r\n    component: ChipComponent,\r\n    props: args,\r\n})"
             },
             {
                 "name": "Text",
@@ -800,6 +870,28 @@
                     "deprecationMessage": "",
                     "type": "Story<ColorsExampleComponent>",
                     "defaultValue": "(args: ColorsExampleComponent) => ( {\n    props: args\n} )"
+                }
+            ],
+            "projects/ngx-aurora-pattern-library/src/lib/components/chip/chip.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-aurora-pattern-library/src/lib/components/chip/chip.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-aurora-pattern-library/src/lib/components/chip/chip.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<ChipComponent>",
+                    "defaultValue": "(\r\n    args: ChipComponent\r\n) => ({\r\n    component: ChipComponent,\r\n    props: args,\r\n})"
                 }
             ],
             "projects/ngx-aurora-pattern-library/src/lib/components/button/button.stories.ts": [
@@ -939,6 +1031,35 @@
                 "name": "CardComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-aurora-pattern-library/src/lib/components/chip/chip.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ChipComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-aurora-pattern-library/src/lib/components/chip/chip.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-aurora-pattern-library/src/lib/components/chip/chip.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
