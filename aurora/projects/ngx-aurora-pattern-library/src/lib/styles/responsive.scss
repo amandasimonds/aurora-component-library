@@ -1,0 +1,44 @@
+$respond-xs: 25em;
+$respond-sm: 37.5em;
+$respond-md: 50em;
+$respond-lg: 64em;
+$respond-xl: 90em;
+
+$mobile: $respond-xs; // 4 columns
+$small-tablet: $respond-sm; // 8 columns
+$tablet: $respond-md; // 8 columns
+$large-tablet: $respond-lg; // 8 columns
+$laptop: $respond-xl; // 12 columns
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == desktop {
+        @media (min-width: $laptop) {
+            @content;
+        }
+    }
+    @if $breakpoint == laptop {
+        @media (max-width: $laptop) {
+            @content;
+        }
+    }
+    @if $breakpoint == large-tablet {
+        @media (max-width: $large-tablet) {
+            @content;
+        }
+    }
+    @if $breakpoint == tablet {
+        @media (max-width: $tablet) {
+            @content;
+        }
+    }
+    @if $breakpoint == small-tablet {
+        @media (max-width: $small-tablet) {
+            @content;
+        }
+    }
+    @if $breakpoint == mobile {
+        @media (max-width: $mobile) {
+            @content;
+        }
+    }
+}

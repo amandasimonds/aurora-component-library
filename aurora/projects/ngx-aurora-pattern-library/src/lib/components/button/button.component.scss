@@ -1,5 +1,6 @@
 button {
     font-family: inherit;
+    font-size: var(--fz-md);
     border: 0;
     border-radius: 2px;
     cursor: pointer;
@@ -18,9 +19,6 @@ button {
 }
 
 .primary {
-    font-size: 14px;
-    line-height: 24px;
-    // font-weight: var(--uv-font-bold);
     height: 40px;
     padding: 0 25px;
     color: white;
@@ -45,8 +43,6 @@ button {
 }
 
 .secondary {
-    font-size: 14px;
-    line-height: 24px;
     height: 40px;
     padding: 0 25px;
     background-color: var(--apl-color-secondary-default);
