@@ -1,17 +1,12 @@
 @import './variables.scss';
 @import './responsive.scss';
-
-@font-face {
-    font-family: inter;
-    src: url('../assets/fonts/Inter-Regular.ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 html {
-    font-family: inter;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
-    color: var(--apl-text-body-color);
     font-weight: 100;
     font-size: var(--fz-md);
 

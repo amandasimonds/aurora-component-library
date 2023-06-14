@@ -1,6 +1,5 @@
 @import './style-dictionary/style-dictionary-variables.scss';
 
-
 :root {
     --apl-color-warn: #{$apl-color-warn};
     --apl-color-warn-2: #{$apl-color-warn-2};
@@ -24,6 +23,11 @@
     --apl-color-secondary-default: #{$apl-color-secondary-default};
     --apl-color-blue-transparent: #{$apl-color-blue-transparent};
 
+    --color-text: #{$apl-color-darks-black};
+    --color-background: white;
+
+    // --color-text: white;
+
     --fz-xxs: 12px;
     --fz-xs: 13px;
     --fz-sm: 14px;
@@ -36,4 +40,31 @@
     --fz-h3: 36px;
     --fz-h4: 32px;
     --fz-h6: 24px;
+}
+
+.aurora-dark-theme {
+    --apl-color-warn: #{$apl-color-warn};
+    --apl-color-warn-2: #{$apl-color-warn-2};
+    --apl-color-blue: #{$apl-color-blue};
+    --apl-color-blue-2: #{$apl-color-blue-2};
+    --apl-color-blue-3: #{$apl-color-blue-3};
+    --apl-color-light-blue: #{$apl-color-light-blue};
+    --apl-color-light-violet: #{$apl-color-light-violet};
+    --apl-color-light-pink: #{$apl-color-light-pink};
+    --apl-color-background-blue: #{$apl-color-background-blue};
+    --apl-color-gradient1: #{$apl-color-gradient1};
+    --apl-color-gradient2: #{$apl-color-gradient2};
+    --apl-color-primary-default: white;
+    --apl-color-primary-hover: #{$apl-color-primary-hover};
+    --apl-color-success-default: #{$apl-color-success-default};
+    --apl-color-success-hover: #{$apl-color-success-hover};
+    --apl-color-darks-black: #{$apl-color-darks-black};
+    --apl-color-darks-blue: #{$apl-color-darks-blue};
+    --apl-color-darks-gray: #{$apl-color-darks-gray};
+    --apl-color-secondary-hover: #{$apl-color-secondary-hover};
+    --apl-color-secondary-default: #{$apl-color-secondary-default};
+    --apl-color-blue-transparent: #{$apl-color-blue-transparent};
+
+    --color-text: white;
+    --color-background: #{$apl-color-darks-blue};
 }

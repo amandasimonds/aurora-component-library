@@ -227,7 +227,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "button {\n    font-family: inherit;\n    border: 0;\n    border-radius: 2px;\n    cursor: pointer;\n    display: inline-block;\n    display: flex;\n    align-items: center;\n    background-color: transparent;\n\n    &>* {\n        display: inline-block;\n    }\n\n    &:disabled {\n        cursor: not-allowed;\n    }\n}\n\n.primary {\n    font-size: 14px;\n    line-height: 24px;\n    // font-weight: var(--uv-font-bold);\n    height: 40px;\n    padding: 0 25px;\n    color: white;\n    background-color: var(--apl-color-primary-default);\n    border: 0;\n\n    &:disabled {\n        background-color: gray;\n    }\n\n    &:hover:not(:disabled) {\n        background-color: var(--apl-color-primary-hover);\n    }\n\n    &-text {\n        color: var(--apl-color-primary-default);\n\n        &:hover {\n            color: var(--apl-color-primary-hover);\n        }\n    }\n}\n\n.secondary {\n    font-size: 14px;\n    line-height: 24px;\n    height: 40px;\n    padding: 0 25px;\n    background-color: var(--apl-color-secondary-default);\n\n    &:hover {\n        background-color: var(--apl-color-secondary-hover);\n    }\n}\n\n.text {\n    color: var(--apl-color-primary-default);\n\n    &:disabled {\n        color: var(--apl-color-darks-gray);\n    }\n\n    &:hover:not(:disabled) {\n        color: var(--apl-color-primary-hover);\n    }\n}\n\n",
+                    "data": "button {\n    font-family: inherit;\n    font-size: var(--fz-md);\n    border: 0;\n    border-radius: 2px;\n    cursor: pointer;\n    display: inline-block;\n    display: flex;\n    align-items: center;\n    background-color: transparent;\n\n    &>* {\n        display: inline-block;\n    }\n\n    &:disabled {\n        cursor: not-allowed;\n    }\n}\n\n.primary {\n    height: 40px;\n    padding: 0 25px;\n    color: white;\n    background-color: var(--apl-color-primary-default);\n    border: 0;\n\n    &:disabled {\n        background-color: gray;\n    }\n\n    &:hover:not(:disabled) {\n        background-color: var(--apl-color-primary-hover);\n    }\n\n    &-text {\n        color: var(--apl-color-primary-default);\n\n        &:hover {\n            color: var(--apl-color-primary-hover);\n        }\n    }\n}\n\n.secondary {\n    height: 40px;\n    padding: 0 25px;\n    background-color: var(--apl-color-secondary-default);\n\n    &:hover {\n        background-color: var(--apl-color-secondary-hover);\n    }\n}\n\n.text {\n    color: var(--apl-color-primary-default);\n\n    &:disabled {\n        color: var(--apl-color-darks-gray);\n    }\n\n    &:hover:not(:disabled) {\n        color: var(--apl-color-primary-hover);\n    }\n}\n\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],
@@ -339,7 +339,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".chip {\r\n    border-radius: 16px;\r\n    background-color: var(--apl-color-blue);\r\n    color: var(--apl-color-secondary-default);\r\n    height: 1.75rem;\r\n    display: flex;\r\n    width: max-content;\r\n    align-items: center;\r\n    padding: 0 0.75rem;\r\n    font-size: 1rem;\r\n\r\n    &:hover {\r\n        background-color: var(--apl-color-blue-2);\r\n        cursor: pointer;\r\n    }\r\n}\r\n",
+                    "data": ".chip {\n    border-radius: 16px;\n    background-color: var(--apl-color-blue);\n    color: var(--apl-color-secondary-default);\n    height: 1.75rem;\n    display: flex;\n    width: max-content;\n    align-items: center;\n    padding: 0 0.75rem;\n    font-size: 1rem;\n\n    &:hover {\n        background-color: var(--apl-color-blue-2);\n        cursor: pointer;\n    }\n}\n",
                     "styleUrl": "./chip.component.scss"
                 }
             ],
@@ -489,6 +489,49 @@
             "implements": [
                 "OnInit"
             ]
+        },
+        {
+            "name": "TypographyExampleComponent",
+            "id": "component-TypographyExampleComponent-dd766d46023619d59992075d63c63b24b3085667764eb321def7ca9929267b280d72ccf8a42bb034b170876140219cd172afac55fe446e2bf688b1278774cbf4",
+            "file": "storybook-pages/typography/typography-example.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [
+                "ViewEncapsulation.None"
+            ],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "typography-example",
+            "styleUrls": [
+                "./typography-example.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./typography-example.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {\n    ChangeDetectionStrategy,\n    Component,\n    ViewEncapsulation,\n} from '@angular/core';\n\n@Component({\n    selector: 'typography-example',\n    templateUrl: './typography-example.component.html',\n    styleUrls: ['./typography-example.component.scss'],\n    changeDetection: ChangeDetectionStrategy.OnPush,\n    encapsulation: ViewEncapsulation.None,\n})\nexport class TypographyExampleComponent {}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".container {\n    display: flex;\n    div {\n        padding: 1rem;\n    }\n}",
+                    "styleUrl": "./typography-example.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"container\">\n    <div>\n        <h1>Heading 1</h1>\n        <h2>Heading 2</h2>\n        <h3>Heading 3</h3>\n        <h4>Heading 4</h4>\n        <h5>Heading 5</h5>\n        <h6>Heading 6</h6>\n    </div>\n    <div>\n        <p>Paragraph</p>\n        <span>Body</span>\n        <a href=\"\" target=\"_blank\">link</a>\n    </div>\n</div>\n"
         }
     ],
     "modules": [
@@ -711,6 +754,50 @@
                     "elements": []
                 }
             ]
+        },
+        {
+            "name": "TypographyExampleModule",
+            "id": "module-TypographyExampleModule-477f1066b596efd560a5e15541c54f521882b1eea08837824b0da2df05ce82f09e55fe3fba918ff3fc966ff1e8304e7fdc6b4c475fa629130e1195655ed422c5",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "storybook-pages/typography/typography-example.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { TypographyExampleComponent } from './typography-example.component';\n\n@NgModule({\n    declarations: [TypographyExampleComponent],\n    imports: [CommonModule],\n    exports: [TypographyExampleComponent],\n})\nexport class TypographyExampleModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "TypographyExampleComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "TypographyExampleComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
         }
     ],
     "miscellaneous": {
@@ -730,6 +817,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "storybook-pages/colors/colors-example.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "storybook-pages/typography/typography-example.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -788,6 +885,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "storybook-pages/typography/typography-example.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<TypographyExampleComponent>",
+                "defaultValue": "(\n    args: TypographyExampleComponent\n) => ({\n    props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/ngx-aurora-pattern-library/src/lib/components/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -802,7 +909,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ChipComponent>",
-                "defaultValue": "(\r\n    args: ChipComponent\r\n) => ({\r\n    component: ChipComponent,\r\n    props: args,\r\n})"
+                "defaultValue": "(\n    args: ChipComponent\n) => ({\n    component: ChipComponent,\n    props: args,\n})"
             },
             {
                 "name": "Text",
@@ -872,6 +979,28 @@
                     "defaultValue": "(args: ColorsExampleComponent) => ( {\n    props: args\n} )"
                 }
             ],
+            "storybook-pages/typography/typography-example.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "storybook-pages/typography/typography-example.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "storybook-pages/typography/typography-example.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<TypographyExampleComponent>",
+                    "defaultValue": "(\n    args: TypographyExampleComponent\n) => ({\n    props: args,\n})"
+                }
+            ],
             "projects/ngx-aurora-pattern-library/src/lib/components/chip/chip.stories.ts": [
                 {
                     "name": "Default",
@@ -891,7 +1020,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<ChipComponent>",
-                    "defaultValue": "(\r\n    args: ChipComponent\r\n) => ({\r\n    component: ChipComponent,\r\n    props: args,\r\n})"
+                    "defaultValue": "(\n    args: ChipComponent\n) => ({\n    component: ChipComponent,\n    props: args,\n})"
                 }
             ],
             "projects/ngx-aurora-pattern-library/src/lib/components/button/button.stories.ts": [
@@ -1121,6 +1250,35 @@
             },
             {
                 "filePath": "storybook-pages/colors/colors-example.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "storybook-pages/typography/typography-example.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TypographyExampleComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "storybook-pages/typography/typography-example.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "storybook-pages/typography/typography-example.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
