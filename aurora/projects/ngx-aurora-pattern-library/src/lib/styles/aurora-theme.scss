@@ -1,30 +1,43 @@
+@use './dark-theme.scss' as *;
+
 @import './variables.scss';
 @import './typography.scss';
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @include darkTheme;
+    }
+}
+
+html[data-theme='dark'] {
+    @include darkTheme;
+}
 
 // .aurora-light-theme {
 html {
     font-size: 1rem;
-    color: var(--apl-text-color-light-theme);
+    color: var(--color-text);
     font-family: 'Inter';
     font-weight: 300;
 }
 
 body {
-    color: var(--apl-text-color-light-theme);
-    background-color: var(--apl-color-background-light-theme);
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 // }
 
-.aurora-dark-theme {
-    html {
-        font-size: 1rem;
-        color: var(--apl-text-color);
-        font-family: 'Inter';
-        font-weight: 300;
-    }
+// .aurora-dark-theme {
+//     html {
+//         font-size: 1rem;
+//         color: var(--apl-text-color);
+//         font-family: 'Inter';
+//         font-weight: 300;
+//     }
 
-    body {
-        color: var(--apl-text-color);
-        background-color: var(--apl-color-background-blue);
-    }
-}
+//     body {
+//         color: var(--apl-text-color);
+//         background-color: var(--apl-color-background-blue);
+//     }
+// }

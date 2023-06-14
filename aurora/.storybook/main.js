@@ -12,6 +12,7 @@ module.exports = {
         '@storybook/addon-links',
         '@storybook/addon-essentials',
         '@storybook/addon-interactions',
+        'storybook-addon-dark-mode-toggle'
     ],
     framework: '@storybook/angular',
 }
