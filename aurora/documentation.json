@@ -526,12 +526,12 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".container {\n    display: flex;\n    div {\n        padding: 1rem;\n    }\n}",
+                    "data": "@import '../../projects/ngx-aurora-pattern-library/src/lib/styles/aurora-theme.scss';\n\n\n.container {\n    display: flex;\n    div {\n        padding: 1rem;\n    }\n}",
                     "styleUrl": "./typography-example.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"container\">\n    <div>\n        <h1>Heading 1</h1>\n        <h2>Heading 2</h2>\n        <h3>Heading 3</h3>\n        <h4>Heading 4</h4>\n        <h5>Heading 5</h5>\n        <h6>Heading 6</h6>\n    </div>\n    <div>\n        <p>Paragraph</p>\n        <span>Body</span>\n        <a href=\"\" target=\"_blank\">link</a>\n    </div>\n</div>\n"
+            "templateData": "<div class=\"container aurora-dark-theme\">\n    <div>\n        <h1>Heading 1</h1>\n        <h2>Heading 2</h2>\n        <h3>Heading 3</h3>\n        <h4>Heading 4</h4>\n        <h5>Heading 5</h5>\n        <h6>Heading 6</h6>\n    </div>\n    <div>\n        <p>Paragraph</p>\n        <span>Body</span>\n        <a href=\"\" target=\"_blank\">link</a>\n    </div>\n</div>\n"
         }
     ],
     "modules": [

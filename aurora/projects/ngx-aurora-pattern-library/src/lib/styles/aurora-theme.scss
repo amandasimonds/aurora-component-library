@@ -1,5 +1,18 @@
+@use './dark-theme.scss' as *;
+
 @import './variables.scss';
 @import './typography.scss';
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @include darkTheme;
+    }
+}
+
+html[data-theme='dark'] {
+    @include darkTheme;
+}
 
 // .aurora-light-theme {
 html {
