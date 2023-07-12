@@ -1,5 +1,6 @@
 button {
     font-family: inherit;
+    color: white;
     font-size: var(--fz-md);
     border: 0;
     border-radius: 2px;
@@ -9,19 +10,21 @@ button {
     align-items: center;
     background-color: transparent;
 
-    &>* {
+    & > * {
         display: inline-block;
     }
 
     &:disabled {
         cursor: not-allowed;
+        &:not(.text) {
+            background-color: gray;
+        }
     }
 }
 
 .primary {
     height: 40px;
     padding: 0 25px;
-    color: white;
     background-color: var(--color-primary-default);
     border: 0;
 
@@ -47,7 +50,7 @@ button {
     padding: 0 25px;
     background-color: var(--color-secondary-default);
 
-    &:hover {
+    &:hover:not(:disabled) {
         background-color: var(--color-secondary-hover);
     }
 }
@@ -63,4 +66,3 @@ button {
         color: var(--color-primary-hover);
     }
 }
-
