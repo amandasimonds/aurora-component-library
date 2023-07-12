@@ -1,20 +1,7 @@
 @use './dark-theme.scss' as *;
-
 @import './variables.scss';
 @import './typography.scss';
 
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        @include darkTheme;
-    }
-}
-
-html[data-theme='dark'] {
-    @include darkTheme;
-}
-
-// .aurora-light-theme {
 html {
     font-size: 1rem;
     color: var(--color-text);
@@ -26,18 +13,13 @@ body {
     color: var(--color-text);
     background-color: var(--color-background);
 }
-// }
 
-// .aurora-dark-theme {
-//     html {
-//         font-size: 1rem;
-//         color: var(--apl-text-color);
-//         font-family: 'Inter';
-//         font-weight: 300;
-//     }
+@media (prefers-color-scheme: dark) {
+    :root {
+        @include darkTheme;
+    }
+}
 
-//     body {
-//         color: var(--apl-text-color);
-//         background-color: var(--apl-color-background-blue);
-//     }
-// }
+html[data-theme='dark'] {
+    @include darkTheme;
+}

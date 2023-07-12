@@ -227,7 +227,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "button {\n    font-family: inherit;\n    font-size: var(--fz-md);\n    border: 0;\n    border-radius: 2px;\n    cursor: pointer;\n    display: inline-block;\n    display: flex;\n    align-items: center;\n    background-color: transparent;\n\n    &>* {\n        display: inline-block;\n    }\n\n    &:disabled {\n        cursor: not-allowed;\n    }\n}\n\n.primary {\n    height: 40px;\n    padding: 0 25px;\n    color: white;\n    background-color: var(--apl-color-primary-default);\n    border: 0;\n\n    &:disabled {\n        background-color: gray;\n    }\n\n    &:hover:not(:disabled) {\n        background-color: var(--apl-color-primary-hover);\n    }\n\n    &-text {\n        color: var(--apl-color-primary-default);\n\n        &:hover {\n            color: var(--apl-color-primary-hover);\n        }\n    }\n}\n\n.secondary {\n    height: 40px;\n    padding: 0 25px;\n    background-color: var(--apl-color-secondary-default);\n\n    &:hover {\n        background-color: var(--apl-color-secondary-hover);\n    }\n}\n\n.text {\n    color: var(--apl-color-primary-default);\n\n    &:disabled {\n        color: var(--apl-color-darks-gray);\n    }\n\n    &:hover:not(:disabled) {\n        color: var(--apl-color-primary-hover);\n    }\n}\n\n",
+                    "data": "button {\n    font-family: inherit;\n    font-size: var(--fz-md);\n    border: 0;\n    border-radius: 2px;\n    cursor: pointer;\n    display: inline-block;\n    display: flex;\n    align-items: center;\n    background-color: transparent;\n\n    &>* {\n        display: inline-block;\n    }\n\n    &:disabled {\n        cursor: not-allowed;\n    }\n}\n\n.primary {\n    height: 40px;\n    padding: 0 25px;\n    color: white;\n    background-color: var(--color-primary-default);\n    border: 0;\n\n    &:disabled {\n        background-color: gray;\n    }\n\n    &:hover:not(:disabled) {\n        background-color: var(--color-primary-hover);\n    }\n\n    &-text {\n        color: var(--color-primary-default);\n\n        &:hover {\n            color: var(--color-primary-hover);\n        }\n    }\n}\n\n.secondary {\n    height: 40px;\n    padding: 0 25px;\n    background-color: var(--color-secondary-default);\n\n    &:hover {\n        background-color: var(--color-secondary-hover);\n    }\n}\n\n.text {\n    color: var(--color-primary-default);\n\n    &:disabled {\n        color: var(--color-darks-gray);\n    }\n\n    &:hover:not(:disabled) {\n        color: var(--color-primary-hover);\n    }\n}\n\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],
@@ -289,12 +289,12 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".card {\n    padding: 1rem;\n    width: auto;\n    height: auto;\n    display: inline-flex;\n    gap: 8px;\n    flex-direction: column;\n\n    &-sm {\n        width: 200px;\n    }\n\n    &-md {\n        width: 365px;\n    }\n}\n",
+                    "data": ".card {\n    padding: 1rem;\n    width: auto;\n    height: auto;\n    display: inline-flex;\n    gap: 8px;\n    flex-direction: column;\n    border-radius: 7px;\n    background-color: var(--color-object);\n    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);\n\n    &-sm {\n        width: 200px;\n    }\n\n    &-md {\n        width: 365px;\n    }\n}\n",
                     "styleUrl": "./card.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"box card\" \n    [class.card-sm]=\"size === 'sm'\"\n    [class.card-md]=\"size === 'md'\">\n    <ng-content></ng-content>\n</div>\n"
+            "templateData": "<div class=\"card\" \n    [class.card-sm]=\"size === 'sm'\"\n    [class.card-md]=\"size === 'md'\">\n    <ng-content></ng-content>\n</div>\n"
         },
         {
             "name": "ChipComponent",
@@ -339,7 +339,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".chip {\n    border-radius: 16px;\n    background-color: var(--apl-color-blue);\n    color: var(--apl-color-secondary-default);\n    height: 1.75rem;\n    display: flex;\n    width: max-content;\n    align-items: center;\n    padding: 0 0.75rem;\n    font-size: 1rem;\n\n    &:hover {\n        background-color: var(--apl-color-blue-2);\n        cursor: pointer;\n    }\n}\n",
+                    "data": ".chip {\n    border-radius: 16px;\n    background-color: var(--color-blue);\n    color: var(--color-secondary-default);\n    height: 1.75rem;\n    display: flex;\n    width: max-content;\n    align-items: center;\n    padding: 0 0.75rem;\n    font-size: 1rem;\n\n    &:hover {\n        background-color: var(--color-blue-2);\n        cursor: pointer;\n    }\n}\n",
                     "styleUrl": "./chip.component.scss"
                 }
             ],

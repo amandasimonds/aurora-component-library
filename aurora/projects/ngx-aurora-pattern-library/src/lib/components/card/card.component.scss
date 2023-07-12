@@ -5,6 +5,9 @@
     display: inline-flex;
     gap: 8px;
     flex-direction: column;
+    border-radius: 7px;
+    background-color: var(--color-object);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
 
     &-sm {
         width: 200px;
