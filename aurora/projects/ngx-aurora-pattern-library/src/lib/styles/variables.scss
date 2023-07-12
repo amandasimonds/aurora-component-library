@@ -1,32 +1,31 @@
 @import './style-dictionary/style-dictionary-variables.scss';
 
 :root {
-    --apl-color-warn: #{$apl-color-warn};
-    --apl-color-warn-2: #{$apl-color-warn-2};
-    --apl-color-blue: #{$apl-color-blue};
-    --apl-color-blue-2: #{$apl-color-blue-2};
-    --apl-color-blue-3: #{$apl-color-blue-3};
-    --apl-color-light-blue: #{$apl-color-light-blue};
-    --apl-color-light-violet: #{$apl-color-light-violet};
-    --apl-color-light-pink: #{$apl-color-light-pink};
-    --apl-color-background-blue: #{$apl-color-background-blue};
-    --apl-color-gradient1: #{$apl-color-gradient1};
-    --apl-color-gradient2: #{$apl-color-gradient2};
-    --apl-color-primary-default: #{$apl-color-primary-default};
-    --apl-color-primary-hover: #{$apl-color-primary-hover};
-    --apl-color-success-default: #{$apl-color-success-default};
-    --apl-color-success-hover: #{$apl-color-success-hover};
-    --apl-color-darks-black: #{$apl-color-darks-black};
-    --apl-color-darks-blue: #{$apl-color-darks-blue};
-    --apl-color-darks-gray: #{$apl-color-darks-gray};
-    --apl-color-secondary-hover: #{$apl-color-secondary-hover};
-    --apl-color-secondary-default: #{$apl-color-secondary-default};
-    --apl-color-blue-transparent: #{$apl-color-blue-transparent};
+    --color-warn: #{$apl-color-warn};
+    --color-warn-2: #{$apl-color-warn-2};
+    --color-blue: #{$apl-color-blue};
+    --color-blue-2: #{$apl-color-blue-2};
+    --color-blue-3: #{$apl-color-blue-3};
+    --color-light-blue: #{$apl-color-light-blue};
+    --color-light-violet: #{$apl-color-light-violet};
+    --color-light-pink: #{$apl-color-light-pink};
+    --color-background-blue: #{$apl-color-background-blue};
+    --color-gradient1: #{$apl-color-gradient1};
+    --color-gradient2: #{$apl-color-gradient2};
+    --color-primary-default: #{$apl-color-primary-default};
+    --color-primary-hover: #{$apl-color-primary-hover};
+    --color-success-default: #{$apl-color-success-default};
+    --color-success-hover: #{$apl-color-success-hover};
+    --color-darks-black: #{$apl-color-darks-black};
+    --color-darks-blue: #{$apl-color-darks-blue};
+    --color-darks-gray: #{$apl-color-darks-gray};
+    --color-secondary-hover: #{$apl-color-secondary-hover};
+    --color-secondary-default: #{$apl-color-secondary-default};
+    --color-blue-transparent: #{$apl-color-blue-transparent};
 
     --color-text: #{$apl-color-darks-black};
-    --color-background: white;
-
-    // --color-text: white;
+    --color-background: #{$apl-color-light-gray};
+    --color-object: white;
 
     --fz-xxs: 12px;
     --fz-xs: 13px;
@@ -40,31 +39,4 @@
     --fz-h3: 36px;
     --fz-h4: 32px;
     --fz-h6: 24px;
-}
-
-.aurora-dark-theme {
-    --apl-color-warn: #{$apl-color-warn};
-    --apl-color-warn-2: #{$apl-color-warn-2};
-    --apl-color-blue: #{$apl-color-blue};
-    --apl-color-blue-2: #{$apl-color-blue-2};
-    --apl-color-blue-3: #{$apl-color-blue-3};
-    --apl-color-light-blue: #{$apl-color-light-blue};
-    --apl-color-light-violet: #{$apl-color-light-violet};
-    --apl-color-light-pink: #{$apl-color-light-pink};
-    --apl-color-background-blue: #{$apl-color-background-blue};
-    --apl-color-gradient1: #{$apl-color-gradient1};
-    --apl-color-gradient2: #{$apl-color-gradient2};
-    --apl-color-primary-default: white;
-    --apl-color-primary-hover: #{$apl-color-primary-hover};
-    --apl-color-success-default: #{$apl-color-success-default};
-    --apl-color-success-hover: #{$apl-color-success-hover};
-    --apl-color-darks-black: #{$apl-color-darks-black};
-    --apl-color-darks-blue: #{$apl-color-darks-blue};
-    --apl-color-darks-gray: #{$apl-color-darks-gray};
-    --apl-color-secondary-hover: #{$apl-color-secondary-hover};
-    --apl-color-secondary-default: #{$apl-color-secondary-default};
-    --apl-color-blue-transparent: #{$apl-color-blue-transparent};
-
-    --color-text: white;
-    --color-background: #{$apl-color-darks-blue};
 }

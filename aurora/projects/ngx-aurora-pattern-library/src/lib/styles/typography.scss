@@ -64,18 +64,18 @@ a:hover,
 a:active,
 a:visited {
     font: inherit;
-    color: var(--apl-color-secondary-default);
+    color: var(--color-secondary-default);
     text-decoration: inherit;
     transition: all 0.25s;
 
     &:hover {
-        color: var(--apl-color-secondary-hover);
+        color: var(--color-secondary-hover);
         text-decoration: inherit;
         transform: translateY(-2px);
         transition: all 0.25s;
 
         svg {
-            color: var(--apl-color-secondary-hover);
+            color: var(--color-secondary-hover);
         }
     }
 }
@@ -90,7 +90,7 @@ button {
 }
 
 .text-highlight {
-    color: var(--apl-color-secondary-default);
+    color: var(--color-secondary-default);
     &:hover {
         color: inherit;
     }

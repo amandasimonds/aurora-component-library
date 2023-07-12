@@ -22,7 +22,7 @@ button {
     height: 40px;
     padding: 0 25px;
     color: white;
-    background-color: var(--apl-color-primary-default);
+    background-color: var(--color-primary-default);
     border: 0;
 
     &:disabled {
@@ -30,14 +30,14 @@ button {
     }
 
     &:hover:not(:disabled) {
-        background-color: var(--apl-color-primary-hover);
+        background-color: var(--color-primary-hover);
     }
 
     &-text {
-        color: var(--apl-color-primary-default);
+        color: var(--color-primary-default);
 
         &:hover {
-            color: var(--apl-color-primary-hover);
+            color: var(--color-primary-hover);
         }
     }
 }
@@ -45,22 +45,22 @@ button {
 .secondary {
     height: 40px;
     padding: 0 25px;
-    background-color: var(--apl-color-secondary-default);
+    background-color: var(--color-secondary-default);
 
     &:hover {
-        background-color: var(--apl-color-secondary-hover);
+        background-color: var(--color-secondary-hover);
     }
 }
 
 .text {
-    color: var(--apl-color-primary-default);
+    color: var(--color-primary-default);
 
     &:disabled {
-        color: var(--apl-color-darks-gray);
+        color: var(--color-darks-gray);
     }
 
     &:hover:not(:disabled) {
-        color: var(--apl-color-primary-hover);
+        color: var(--color-primary-hover);
     }
 }
 
