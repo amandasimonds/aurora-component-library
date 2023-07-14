@@ -1,0 +1,61 @@
+.input-container {
+    &.top-position,
+    &.default-position {
+        display: flex;
+        flex-direction: column;
+
+        .input-label {
+            padding-bottom: 0.5rem;
+        }
+    }
+
+    &.left-position {
+        display: flex;
+        align-items: center;
+
+        .input-label {
+            padding-right: 1rem;
+        }
+    }
+
+    &.right-position {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+
+        .input-label {
+            padding-left: 1rem;
+        }
+    }
+
+    .input-label {
+        white-space: nowrap;
+        size: inherit;
+    }
+
+    .aurora-pl-input {
+        padding: 0.5rem 1rem;
+        height: 2.5rem;
+        box-sizing: border-box;
+        outline: none;
+        width: 100%;
+
+        &[disabled] {
+            pointer-events: none;
+            background-color: var(--color-darks-gray);
+        }
+
+        &:focus,
+        &:hover {
+            border: 0.125rem solid var(--color-primary-default);
+            padding: 0.4375rem 0.9375rem;
+        }
+
+        border-radius: 0.1875rem;
+        border: 0.0625rem solid var(--color-success-default);
+    }
+}
+
+:host {
+    width: 100%;
+}
