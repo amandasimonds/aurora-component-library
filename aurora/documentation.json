@@ -227,7 +227,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "button {\n    font-family: inherit;\n    font-size: var(--fz-md);\n    border: 0;\n    border-radius: 2px;\n    cursor: pointer;\n    display: inline-block;\n    display: flex;\n    align-items: center;\n    background-color: transparent;\n\n    &>* {\n        display: inline-block;\n    }\n\n    &:disabled {\n        cursor: not-allowed;\n    }\n}\n\n.primary {\n    height: 40px;\n    padding: 0 25px;\n    color: white;\n    background-color: var(--color-primary-default);\n    border: 0;\n\n    &:disabled {\n        background-color: gray;\n    }\n\n    &:hover:not(:disabled) {\n        background-color: var(--color-primary-hover);\n    }\n\n    &-text {\n        color: var(--color-primary-default);\n\n        &:hover {\n            color: var(--color-primary-hover);\n        }\n    }\n}\n\n.secondary {\n    height: 40px;\n    padding: 0 25px;\n    background-color: var(--color-secondary-default);\n\n    &:hover {\n        background-color: var(--color-secondary-hover);\n    }\n}\n\n.text {\n    color: var(--color-primary-default);\n\n    &:disabled {\n        color: var(--color-darks-gray);\n    }\n\n    &:hover:not(:disabled) {\n        color: var(--color-primary-hover);\n    }\n}\n\n",
+                    "data": "button {\n    font-family: inherit;\n    color: white;\n    font-size: var(--fz-md);\n    border: 0;\n    border-radius: 2px;\n    cursor: pointer;\n    display: inline-block;\n    display: flex;\n    align-items: center;\n    background-color: transparent;\n\n    & > * {\n        display: inline-block;\n    }\n\n    &:disabled {\n        cursor: not-allowed;\n        &:not(.text) {\n            background-color: gray;\n        }\n    }\n}\n\n.primary {\n    height: 40px;\n    padding: 0 25px;\n    background-color: var(--color-primary-default);\n    border: 0;\n\n    &:disabled {\n        background-color: gray;\n    }\n\n    &:hover:not(:disabled) {\n        background-color: var(--color-primary-hover);\n    }\n\n    &-text {\n        color: var(--color-primary-default);\n\n        &:hover {\n            color: var(--color-primary-hover);\n        }\n    }\n}\n\n.secondary {\n    height: 40px;\n    padding: 0 25px;\n    background-color: var(--color-secondary-default);\n\n    &:hover:not(:disabled) {\n        background-color: var(--color-secondary-hover);\n    }\n}\n\n.text {\n    color: var(--color-primary-default);\n\n    &:disabled {\n        color: var(--color-darks-gray);\n    }\n\n    &:hover:not(:disabled) {\n        color: var(--color-primary-hover);\n    }\n}\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],
@@ -436,6 +436,452 @@
                 "OnInit"
             ],
             "templateData": "<div class=\"aurora-theme\">\n    <p>Colors</p>\n    <div class=\"wrapper\">\n        <div\n            class=\"color-container\"\n            *ngFor=\"let color of colorsArray; let i = index\"\n        >\n            <div class=\"color-item\">\n                <span> {{ color[0] }} </span>\n                <span> value: {{ color[1].value }} </span>\n                <div\n                    class=\"color-block\"\n                    [ngStyle]=\"{ 'background-color': color[1].value }\"\n                ></div>\n            </div>\n        </div>\n    </div>\n</div>\n"
+        },
+        {
+            "name": "InputComponent",
+            "id": "component-InputComponent-b7a72a3c7184f28c9b68cff296d102f82c858774271a0edbf0062769810a41ba74bd3234cc963bcdc2cbc39447e4be18ae7347620fa8d86aa7ee3425e0744428",
+            "file": "projects/ngx-aurora-pattern-library/src/lib/components/input/input.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [
+                {
+                    "name": "{\n    provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => InputComponent), multi: true,\n}",
+                    "type": "component"
+                }
+            ],
+            "selector": "aurora-input",
+            "styleUrls": [
+                "./input.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./input.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 42,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "labelPosition",
+                    "defaultValue": "'left'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 54,
+                    "type": "LabelPosition",
+                    "decorators": []
+                },
+                {
+                    "name": "labelText",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 53,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 52,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 56,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "value",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 55,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "unfocused",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 58,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "input",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ElementRef",
+                    "optional": false,
+                    "description": "",
+                    "line": 60,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'input'"
+                        }
+                    ],
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "inputControl",
+                    "defaultValue": "new FormControl()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 65,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "onChange",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 110,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "onTouch",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "VoidFunction",
+                    "optional": false,
+                    "description": "",
+                    "line": 112,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "subscription",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Subscription",
+                    "optional": false,
+                    "description": "",
+                    "line": 67,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "tabIndex",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 63,
+                    "decorators": [
+                        {
+                            "name": "HostBinding",
+                            "stringifiedArguments": "'attr.tabindex'"
+                        }
+                    ],
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "blur",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 80,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "ngOnDestroy",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 101,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 73,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "onFocus",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 106,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "decorators": [
+                        {
+                            "name": "HostListener",
+                            "stringifiedArguments": "'focus'"
+                        }
+                    ],
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "registerOnChange",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "VoidFunction",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 89,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        123
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "VoidFunction",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "registerOnTouched",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "VoidFunction",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 93,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        123
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "VoidFunction",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "setDisabledState",
+                    "args": [
+                        {
+                            "name": "isDisabled",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 97,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        123
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "isDisabled",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "writeValue",
+                    "args": [
+                        {
+                            "name": "value",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 85,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        123
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "value",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [
+                {
+                    "name": "attr.tabindex",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 63,
+                    "type": "number",
+                    "decorators": []
+                }
+            ],
+            "hostListeners": [
+                {
+                    "name": "focus",
+                    "args": [],
+                    "argsDecorator": [],
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 106
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {\n    ChangeDetectionStrategy,\n    Component,\n    ElementRef,\n    EventEmitter,\n    forwardRef,\n    HostBinding,\n    HostListener,\n    Input,\n    OnDestroy,\n    OnInit,\n    Output,\n    ViewChild,\n} from '@angular/core';\nimport {\n    ControlValueAccessor,\n    FormControl,\n    NG_VALUE_ACCESSOR,\n} from '@angular/forms';\nimport { Subscription } from 'rxjs';\nimport {\n    LabelPosition,\n    LabelPositionsClasses,\n    positionMap,\n} from './input.model';\n\n@Component({\n    selector: 'aurora-input',\n    templateUrl: './input.component.html',\n    styleUrls: ['./input.component.scss'],\n    providers: [\n        {\n            provide: NG_VALUE_ACCESSOR,\n            useExisting: forwardRef(() => InputComponent),\n            multi: true,\n        },\n    ],\n    changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class InputComponent implements OnInit, OnDestroy, ControlValueAccessor {\n    @Input()\n    public set disabled(value: boolean) {\n        if (value) {\n            this.inputControl.disable();\n\n            return;\n        }\n\n        this.inputControl.enable();\n    }\n\n    @Input() public placeholder = '';\n    @Input() public labelText = '';\n    @Input() public labelPosition: LabelPosition = 'left';\n    @Input() public value = '';\n    @Input() public type = '';\n\n    @Output() public readonly unfocused = new EventEmitter<void>();\n\n    @ViewChild('input') public input!: ElementRef;\n\n    @HostBinding('attr.tabindex')\n    public tabIndex = 0;\n\n    public inputControl = new FormControl();\n\n    private subscription!: Subscription;\n\n    public get resultPositionClass(): LabelPositionsClasses {\n        return positionMap.get(this.labelPosition) ?? 'default-position';\n    }\n\n    public ngOnInit(): void {\n        this.writeValue(this.value);\n        this.subscription = this.inputControl.valueChanges.subscribe(\n            (value: Readonly<string>) => this.onChange(value)\n        );\n    }\n\n    public blur(): void {\n        this.onTouch();\n        this.unfocused.emit();\n    }\n\n    public writeValue(value: string): void {\n        this.inputControl.patchValue(value, { emitEvent: false });\n    }\n\n    public registerOnChange(fn: VoidFunction): void {\n        this.onChange = fn;\n    }\n\n    public registerOnTouched(fn: VoidFunction): void {\n        this.onTouch = fn;\n    }\n\n    public setDisabledState(isDisabled: boolean): void {\n        this.disabled = isDisabled;\n    }\n\n    public ngOnDestroy(): void {\n        this.subscription?.unsubscribe();\n    }\n\n    @HostListener('focus')\n    public onFocus(): void {\n        this.input.nativeElement.focus();\n    }\n\n    private onChange = (value: Readonly<string>): void => {};\n\n    private onTouch: VoidFunction = () => {};\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".input-container {\r\n    &.top-position,\r\n    &.default-position {\r\n        display: flex;\r\n        flex-direction: column;\r\n\r\n        .input-label {\r\n            padding-bottom: 0.5rem;\r\n        }\r\n    }\r\n\r\n    &.left-position {\r\n        display: flex;\r\n        align-items: center;\r\n\r\n        .input-label {\r\n            padding-right: 1rem;\r\n        }\r\n    }\r\n\r\n    &.right-position {\r\n        display: flex;\r\n        align-items: center;\r\n        flex-direction: row-reverse;\r\n\r\n        .input-label {\r\n            padding-left: 1rem;\r\n        }\r\n    }\r\n\r\n    .input-label {\r\n        font: var(--pl-font-paragraph);\r\n        white-space: nowrap;\r\n    }\r\n\r\n    .aurora-pl-input {\r\n        padding: 0.5rem 1rem;\r\n        height: 2.5rem;\r\n        box-sizing: border-box;\r\n        outline: none;\r\n        width: 100%;\r\n\r\n        &[disabled] {\r\n            pointer-events: none;\r\n            background-color: var(--pl-base-06);\r\n        }\r\n\r\n        &:focus,\r\n        &:hover {\r\n            border: 0.125rem solid var(--pl-border-color-focus);\r\n            padding: 0.4375rem 0.9375rem;\r\n            background-color: var(--pl-base-01);\r\n        }\r\n\r\n        border-radius: 0.1875rem;\r\n        background-color: var(--pl-base-06);\r\n        border: 0.0625rem solid var(--pl-support-02);\r\n    }\r\n}\r\n\r\n:host {\r\n    width: 100%;\r\n}\r\n",
+                    "styleUrl": "./input.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "implements": [
+                "OnInit",
+                "OnDestroy",
+                "ControlValueAccessor"
+            ],
+            "accessors": {
+                "disabled": {
+                    "name": "disabled",
+                    "setSignature": {
+                        "name": "disabled",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "boolean",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 42,
+                        "jsdoctags": [
+                            {
+                                "name": "value",
+                                "type": "boolean",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "resultPositionClass": {
+                    "name": "resultPositionClass",
+                    "getSignature": {
+                        "name": "resultPositionClass",
+                        "type": "",
+                        "returnType": "LabelPositionsClasses",
+                        "line": 69
+                    }
+                }
+            },
+            "templateData": "<div [ngClass]=\"resultPositionClass\" class=\"input-container\">\n    <span *ngIf=\"labelText\" class=\"input-label\" qa-type=\"pl-input-label\">\n        {{ labelText }}\n    </span>\n    <input\n        class=\"aurora-pl-input\"\n        [placeholder]=\"placeholder\"\n        [type]=\"type\"\n        [value]=\"value\"\n        [formControl]=\"inputControl\"\n        (blur)=\"blur()\"\n        #input\n        qa-type=\"pl-input\"\n    />\n</div>\n"
         },
         {
             "name": "NgxAuroraPatternLibraryComponent",
@@ -712,6 +1158,50 @@
             ]
         },
         {
+            "name": "InputModule",
+            "id": "module-InputModule-914bbe0c70d8328e0fd6a222258713cc97a77943e577e95609a6468fbc66efae3d885cb1f955f9a1d9244c4a89f900c55b741809e9e78c7f4e4f6e386b66523f",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "projects/ngx-aurora-pattern-library/src/lib/components/input/input.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { ReactiveFormsModule } from '@angular/forms';\r\nimport { CommonModule } from '@angular/common';\r\nimport { InputComponent } from './input.component';\r\n\r\n@NgModule({\r\n    declarations: [InputComponent],\r\n    imports: [ReactiveFormsModule, CommonModule],\r\n    exports: [InputComponent],\r\n})\r\nexport class InputModule {}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "InputComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "InputComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
             "name": "NgxAuroraPatternLibraryModule",
             "id": "module-NgxAuroraPatternLibraryModule-991b0a8882e80a4169dcb9424c5d9cc5c4655c0f4e1c078f1256596413ad7d5dcb5d150de7614cfd566140386736d80ba4dcf2f184b7d47accb1fe752d76bd9d",
             "description": "",
@@ -843,6 +1333,26 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-aurora-pattern-library/src/lib/components/input/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "positionMap",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-aurora-pattern-library/src/lib/components/input/input.model.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "new Map<LabelPosition, LabelPositionsClasses>([\r\n    ['top', 'top-position'],\r\n    ['left', 'left-position'],\r\n    ['right', 'right-position'],\r\n])"
+            },
+            {
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -912,6 +1422,16 @@
                 "defaultValue": "(\n    args: ChipComponent\n) => ({\n    component: ChipComponent,\n    props: args,\n})"
             },
             {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-aurora-pattern-library/src/lib/components/input/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<InputComponent>",
+                "defaultValue": "(\n    args: InputComponent\n) => ({\n    component: InputComponent,\n    props: args,\n})"
+            },
+            {
                 "name": "Text",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -933,7 +1453,30 @@
             }
         ],
         "functions": [],
-        "typealiases": [],
+        "typealiases": [
+            {
+                "name": "LabelPosition",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"top\" | \"left\" | \"right\" | \"default\"",
+                "file": "projects/ngx-aurora-pattern-library/src/lib/components/input/input.model.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 186
+            },
+            {
+                "name": "LabelPositionsClasses",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"top-position\" | \"left-position\" | \"right-position\" | \"default-position\"",
+                "file": "projects/ngx-aurora-pattern-library/src/lib/components/input/input.model.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 186
+            }
+        ],
         "enumerations": [],
         "groupedVariables": {
             "projects/ngx-aurora-pattern-library/src/test.ts": [
@@ -1023,6 +1566,40 @@
                     "defaultValue": "(\n    args: ChipComponent\n) => ({\n    component: ChipComponent,\n    props: args,\n})"
                 }
             ],
+            "projects/ngx-aurora-pattern-library/src/lib/components/input/input.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-aurora-pattern-library/src/lib/components/input/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-aurora-pattern-library/src/lib/components/input/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<InputComponent>",
+                    "defaultValue": "(\n    args: InputComponent\n) => ({\n    component: InputComponent,\n    props: args,\n})"
+                }
+            ],
+            "projects/ngx-aurora-pattern-library/src/lib/components/input/input.model.ts": [
+                {
+                    "name": "positionMap",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-aurora-pattern-library/src/lib/components/input/input.model.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "new Map<LabelPosition, LabelPositionsClasses>([\r\n    ['top', 'top-position'],\r\n    ['left', 'left-position'],\r\n    ['right', 'right-position'],\r\n])"
+                }
+            ],
             "projects/ngx-aurora-pattern-library/src/lib/components/button/button.stories.ts": [
                 {
                     "name": "Primary",
@@ -1078,7 +1655,32 @@
         },
         "groupedFunctions": {},
         "groupedEnumerations": {},
-        "groupedTypeAliases": {}
+        "groupedTypeAliases": {
+            "projects/ngx-aurora-pattern-library/src/lib/components/input/input.model.ts": [
+                {
+                    "name": "LabelPosition",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"top\" | \"left\" | \"right\" | \"default\"",
+                    "file": "projects/ngx-aurora-pattern-library/src/lib/components/input/input.model.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 186
+                },
+                {
+                    "name": "LabelPositionsClasses",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"top-position\" | \"left-position\" | \"right-position\" | \"default-position\"",
+                    "file": "projects/ngx-aurora-pattern-library/src/lib/components/input/input.model.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 186
+                }
+            ]
+        }
     },
     "routes": [],
     "coverage": {
@@ -1183,6 +1785,45 @@
             },
             {
                 "filePath": "projects/ngx-aurora-pattern-library/src/lib/components/chip/chip.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-aurora-pattern-library/src/lib/components/input/input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/24",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-aurora-pattern-library/src/lib/components/input/input.model.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "positionMap",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-aurora-pattern-library/src/lib/components/input/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-aurora-pattern-library/src/lib/components/input/input.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

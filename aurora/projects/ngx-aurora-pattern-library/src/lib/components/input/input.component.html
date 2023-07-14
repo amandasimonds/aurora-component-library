@@ -1,0 +1,15 @@
+<div [ngClass]="resultPositionClass" class="input-container">
+    <span *ngIf="labelText" class="input-label" qa-type="pl-input-label">
+        {{ labelText }}
+    </span>
+    <input
+        class="aurora-pl-input"
+        [placeholder]="placeholder"
+        [type]="type"
+        [value]="value"
+        [formControl]="inputControl"
+        (blur)="blur()"
+        #input
+        qa-type="pl-input"
+    />
+</div>
